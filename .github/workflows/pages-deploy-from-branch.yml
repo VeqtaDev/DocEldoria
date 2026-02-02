@@ -1,0 +1,41 @@
+# Déploiement GitHub Pages depuis le contenu du repo (site déjà buildé).
+# Si vous avez l'erreur "The job was not acquired by Runner of type hosted":
+# 1. Réessayez : onglet Actions > sélectionner le workflow > "Re-run all jobs"
+# 2. Ou utilisez Settings > Pages > Source: "Deploy from a branch" (pas GitHub Actions)
+name: Deploy existing site to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: 'pages'
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+
+      - name: Upload artifact (site déjà buildé à la racine)
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: '.'
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
