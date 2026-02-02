@@ -1,0 +1,2107 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.11.0.823382066958">
+
+    <!-- See retype.com -->
+    <meta name="generator" content="Retype 3.11.0">
+
+    <!-- Primary Meta Tags -->
+    <title>Liste des armes</title>
+    <meta name="title" content="Liste des armes">
+    <meta name="description" content="Commande pour donner une arme : giveweapon id nom_arme munitions">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://eldoria-docs.example.com/weapons/">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://eldoria-docs.example.com/weapons/">
+    <meta property="og:title" content="Liste des armes">
+    <meta property="og:description" content="Commande pour donner une arme : giveweapon id nom_arme munitions">
+    <meta property="og:image" content="https://eldoria-docs.example.com/images/eldoria/atwall1.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://eldoria-docs.example.com/weapons/">
+    <meta property="twitter:title" content="Liste des armes">
+    <meta property="twitter:description" content="Commande pour donner une arme : giveweapon id nom_arme munitions">
+    <meta property="twitter:image" content="https://eldoria-docs.example.com/images/eldoria/atwall1.png">
+
+    <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
+
+    <link href="../resources/css/retype.css?v=3.11.0.823382066958" rel="stylesheet">
+
+    <script data-cfasync="false" src="../resources/js/config.js?v=3.11.0.823382066958" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../resources/js/retype.js?v=3.11.0" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=3.11.0.823382066958" data-turbo-eval="false" defer></script>
+</head>
+<body>
+    <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
+        <div class="absolute bottom-0 left-0" style="top: 5rem; right: 50%"></div>
+    
+        <header id="retype-header" class="sticky top-0 z-30 flex w-full h-16 bg-header-bg border-b border-header-border md:h-20">
+            <div class="container relative flex items-center justify-between pr-6 grow md:justify-start">
+                <!-- Mobile menu button skeleton -->
+                <button v-cloak class="skeleton retype-mobile-menu-button flex items-center justify-center shrink-0 overflow-hidden dark:text-white focus:outline-none rounded-full w-10 h-10 ml-3.5 md:hidden"><svg xmlns="http://www.w3.org/2000/svg" class="mb-px shrink-0" width="24" height="24" viewBox="0 0 24 24" role="presentation" style="margin-bottom: 0px;"><g fill="currentColor"><path d="M2 4h20v2H2zM2 11h20v2H2zM2 18h20v2H2z"></path></g></svg></button>
+                <div v-cloak id="retype-sidebar-left-toggle-button"></div>
+        
+                <!-- Logo -->
+                <div class="flex items-center justify-between h-full py-2 md:w-75">
+                    <div class="flex items-center px-2 md:px-6">
+                        <a id="retype-branding-logo" href="../" class="flex items-center leading-snug text-2xl">
+                            <span class="dark:text-white font-bold line-clamp-1 md:line-clamp-2">Eldoria</span>
+                        </a><span id="retype-branding-label" class="inline-flex mt-1 px-2 py-1 ml-4 text-xs font-medium leading-none items-center rounded-md bg-branding-label-bg text-branding-label-text ring-1 ring-branding-label-border ring-inset md:inline-block">Documentation</span>
+                    </div>
+        
+                    <span class="hidden h-8 border-r md:inline-block border-base-border"></span>
+                </div>
+        
+                <div class="flex justify-between md:grow">
+                    <!-- Top Nav -->
+                    <nav id="retype-header-nav" class="hidden md:flex">
+                        <ul class="flex flex-col mb-4 md:pl-16 md:mb-0 md:flex-row md:items-center">
+                            <li class="mr-6">
+                                <a class="py-2 md:mb-0 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text-weight hover:text-header-text-hover" href="../commands/">Commandes</a>
+                            </li>
+                            <li class="mr-6">
+                                <a class="py-2 md:mb-0 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text-weight hover:text-header-text-hover" href="../items/">Items</a>
+                            </li>
+                            <li class="mr-6">
+                                <a class="py-2 md:mb-0 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text-weight hover:text-header-text-hover" href="../weapons/">Armes</a>
+                            </li>
+                            <li class="mr-6">
+                                <a class="py-2 md:mb-0 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text-weight hover:text-header-text-hover" href="../cards/">Cartes</a>
+                            </li>
+                            <li class="mr-6">
+                                <a class="py-2 md:mb-0 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text-weight hover:text-header-text-hover" href="../resources/">Ressources</a>
+                            </li>
+        
+                        </ul>
+                    </nav>
+        
+                    <!-- Header Right Skeleton -->
+                    <div v-cloak class="flex justify-end grow skeleton">
+        
+                        <!-- Search input mock -->
+                        <div class="relative hidden w-40 lg:block lg:max-w-sm lg:ml-auto">
+                            <div class="absolute flex items-center justify-center h-full pl-3 dark:text-dark-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon-base" width="16" height="16" viewBox="0 0 24 24" aria-labelledby="icon" role="presentation" style="margin-bottom: 1px;"><g fill="currentColor" ><path d="M21.71 20.29l-3.68-3.68A8.963 8.963 0 0020 11c0-4.96-4.04-9-9-9s-9 4.04-9 9 4.04 9 9 9c2.12 0 4.07-.74 5.61-1.97l3.68 3.68c.2.19.45.29.71.29s.51-.1.71-.29c.39-.39.39-1.03 0-1.42zM4 11c0-3.86 3.14-7 7-7s7 3.14 7 7c0 1.92-.78 3.66-2.04 4.93-.01.01-.02.01-.02.01-.01.01-.01.01-.01.02A6.98 6.98 0 0111 18c-3.86 0-7-3.14-7-7z" ></path></g></svg>
+                            </div>
+                            <input class="w-full h-10 placeholder-search-placeholder transition-colors duration-200 ease-in bg-search-bg border border-transparent rounded md:text-sm hover:border-search-border-hover focus:outline-none focus:border-search-border-focus" style="padding: 0.625rem 0.75rem 0.625rem 2rem" type="text" placeholder="Search">
+                        </div>
+        
+                        <!-- Mobile search button -->
+                        <div class="flex items-center justify-center w-10 h-10 lg:hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="shrink-0 icon-base" width="20" height="20" viewBox="0 0 24 24" aria-labelledby="icon" role="presentation" style="margin-bottom: 0px;"><g fill="currentColor" ><path d="M21.71 20.29l-3.68-3.68A8.963 8.963 0 0020 11c0-4.96-4.04-9-9-9s-9 4.04-9 9 4.04 9 9 9c2.12 0 4.07-.74 5.61-1.97l3.68 3.68c.2.19.45.29.71.29s.51-.1.71-.29c.39-.39.39-1.03 0-1.42zM4 11c0-3.86 3.14-7 7-7s7 3.14 7 7c0 1.92-.78 3.66-2.04 4.93-.01.01-.02.01-.02.01-.01.01-.01.01-.01.02A6.98 6.98 0 0111 18c-3.86 0-7-3.14-7-7z" ></path></g></svg>
+                        </div>
+        
+                        <!-- Dark mode switch placeholder -->
+                        <div class="w-10 h-10 lg:ml-2"></div>
+        
+                        <!-- History button -->
+                        <div class="flex items-center justify-center w-10 h-10" style="margin-right: -0.625rem;">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="shrink-0 icon-base" width="22" height="22" viewBox="0 0 24 24" aria-labelledby="icon" role="presentation" style="margin-bottom: 0px;"><g fill="currentColor" ><g ><path d="M12.01 6.01c-.55 0-1 .45-1 1V12a1 1 0 00.4.8l3 2.22a.985.985 0 001.39-.2.996.996 0 00-.21-1.4l-2.6-1.92V7.01c.02-.55-.43-1-.98-1z"></path><path d="M12.01 1.91c-5.33 0-9.69 4.16-10.05 9.4l-.29-.26a.997.997 0 10-1.34 1.48l1.97 1.79c.19.17.43.26.67.26s.48-.09.67-.26l1.97-1.79a.997.997 0 10-1.34-1.48l-.31.28c.34-4.14 3.82-7.41 8.05-7.41 4.46 0 8.08 3.63 8.08 8.09s-3.63 8.08-8.08 8.08c-2.18 0-4.22-.85-5.75-2.4a.996.996 0 10-1.42 1.4 10.02 10.02 0 007.17 2.99c5.56 0 10.08-4.52 10.08-10.08.01-5.56-4.52-10.09-10.08-10.09z"></path></g></g></svg>
+                        </div>
+                    </div>
+        
+                    <div v-cloak class="flex justify-end grow">
+                        <div id="retype-mobile-search-button"></div>
+                        <doc-search-desktop></doc-search-desktop>
+        
+                        <doc-theme-switch class="lg:ml-2"></doc-theme-switch>
+                        <doc-history></doc-history>
+                    </div>
+                </div>
+            </div>
+        </header>
+    
+    
+        <div id="retype-container" class="container relative flex bg-white">
+            <!-- Sidebar Skeleton -->
+            <div v-cloak class="fixed flex flex-col shrink-0 duration-300 ease-in-out bg-sidebar-left-bg border-sidebar-left-border sidebar top-20 w-75 border-r h-screen md:sticky transition-transform skeleton">
+            
+                <div class="flex items-center h-16 px-6">
+                    <input class="w-full h-8 px-3 py-2 transition-colors duration-200 ease-linear bg-filter-bg border border-filter-border rounded shadow-none text-sm focus:outline-none focus:border-filter-border-focus" type="text" placeholder="Filter">
+                </div>
+            
+                <div class="pl-6 mt-1 mb-4">
+                    <div class="w-32 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                    <div class="w-48 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                    <div class="w-40 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                    <div class="w-32 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                    <div class="w-48 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                    <div class="w-40 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                </div>
+            
+                <div class="shrink-0 mt-auto bg-transparent dark:border-base-border">
+                    <a class="flex items-center justify-center flex-nowrap h-16 text-gray-350 dark:text-dark-400 hover:text-gray-600 dark:hover:text-dark-300 transition-colors duration-150 ease-in docs-powered-by" target="_blank" href="https://retype.com/" rel="noopener">
+                        <span class="text-xs whitespace-nowrap">Powered by</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="ml-2" fill="currentColor" width="96" height="20" overflow="visible"><path d="M0 0v20h13.59V0H0zm11.15 17.54H2.44V2.46h8.71v15.08zM15.8 20h2.44V4.67L15.8 2.22zM20.45 6.89V20h2.44V9.34z"/><g><path d="M40.16 8.44c0 1.49-.59 2.45-1.75 2.88l2.34 3.32h-2.53l-2.04-2.96h-1.43v2.96h-2.06V5.36h3.5c1.43 0 2.46.24 3.07.73s.9 1.27.9 2.35zm-2.48 1.1c.26-.23.38-.59.38-1.09 0-.5-.13-.84-.4-1.03s-.73-.28-1.39-.28h-1.54v2.75h1.5c.72 0 1.2-.12 1.45-.35zM51.56 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92h4.74v1.83h-6.79V5.36h6.64zM60.09 7.15v7.48h-2.06V7.15h-2.61V5.36h7.28v1.79h-2.61zM70.81 14.64h-2.06v-3.66l-3.19-5.61h2.23l1.99 3.45 1.99-3.45H74l-3.19 5.61v3.66zM83.99 6.19c.65.55.97 1.4.97 2.55s-.33 1.98-1 2.51-1.68.8-3.04.8h-1.23v2.59h-2.06V5.36h3.26c1.42 0 2.45.28 3.1.83zm-1.51 3.65c.25-.28.37-.69.37-1.22s-.16-.92-.48-1.14c-.32-.23-.82-.34-1.5-.34H79.7v3.12h1.38c.68 0 1.15-.14 1.4-.42zM95.85 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92H96v1.83h-6.79V5.36h6.64z"/></g></svg>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Sidebar component -->
+            <doc-sidebar v-cloak>
+                <template #sidebar-footer>
+                    <div class="shrink-0 mt-auto border-t md:bg-transparent md:border-none dark:border-base-border">
+            
+                        <div class="py-3 px-6 md:hidden border-b dark:border-base-border">
+                            <nav>
+                                <ul class="flex flex-wrap justify-center items-center">
+                                    <li class="mr-6">
+                                        <a class="block py-1 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text-weight hover:text-header-text-hover" href="../commands/">Commandes</a>
+                                    </li>
+                                    <li class="mr-6">
+                                        <a class="block py-1 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text-weight hover:text-header-text-hover" href="../items/">Items</a>
+                                    </li>
+                                    <li class="mr-6">
+                                        <a class="block py-1 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text-weight hover:text-header-text-hover" href="../weapons/">Armes</a>
+                                    </li>
+                                    <li class="mr-6">
+                                        <a class="block py-1 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text-weight hover:text-header-text-hover" href="../cards/">Cartes</a>
+                                    </li>
+                                    <li class="mr-6">
+                                        <a class="block py-1 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text-weight hover:text-header-text-hover" href="../resources/">Ressources</a>
+                                    </li>
+            
+                                </ul>
+                            </nav>
+                        </div>
+            
+                        <a class="flex items-center justify-center flex-nowrap h-16 text-gray-350 dark:text-dark-400 hover:text-gray-600 dark:hover:text-dark-300 transition-colors duration-150 ease-in docs-powered-by" target="_blank" href="https://retype.com/" rel="noopener">
+                            <span class="text-xs whitespace-nowrap">Powered by</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="ml-2" fill="currentColor" width="96" height="20" overflow="visible"><path d="M0 0v20h13.59V0H0zm11.15 17.54H2.44V2.46h8.71v15.08zM15.8 20h2.44V4.67L15.8 2.22zM20.45 6.89V20h2.44V9.34z"/><g><path d="M40.16 8.44c0 1.49-.59 2.45-1.75 2.88l2.34 3.32h-2.53l-2.04-2.96h-1.43v2.96h-2.06V5.36h3.5c1.43 0 2.46.24 3.07.73s.9 1.27.9 2.35zm-2.48 1.1c.26-.23.38-.59.38-1.09 0-.5-.13-.84-.4-1.03s-.73-.28-1.39-.28h-1.54v2.75h1.5c.72 0 1.2-.12 1.45-.35zM51.56 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92h4.74v1.83h-6.79V5.36h6.64zM60.09 7.15v7.48h-2.06V7.15h-2.61V5.36h7.28v1.79h-2.61zM70.81 14.64h-2.06v-3.66l-3.19-5.61h2.23l1.99 3.45 1.99-3.45H74l-3.19 5.61v3.66zM83.99 6.19c.65.55.97 1.4.97 2.55s-.33 1.98-1 2.51-1.68.8-3.04.8h-1.23v2.59h-2.06V5.36h3.26c1.42 0 2.45.28 3.1.83zm-1.51 3.65c.25-.28.37-.69.37-1.22s-.16-.92-.48-1.14c-.32-.23-.82-.34-1.5-.34H79.7v3.12h1.38c.68 0 1.15-.14 1.4-.42zM95.85 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92H96v1.83h-6.79V5.36h6.64z"/></g></svg>
+                        </a>
+                    </div>
+                </template>
+            </doc-sidebar>
+    
+            <div class="grow min-w-0 bg-body-bg">
+                <!-- Render "toolbar" template here on api pages --><!-- Render page content -->
+                <div class="flex">
+                    <div id="retype-main" class="min-w-0 p-4 grow md:px-16">
+                        <main class="relative pb-12 lg:pt-2">
+                            <div class="retype-markdown" id="retype-content">
+                                <!-- Rendered if sidebar right is enabled -->
+                                <div id="retype-sidebar-right-toggle"></div>
+                                <!-- Page content  -->
+<doc-anchor-target id="liste-des-armes" class="break-words">
+    <h1>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#liste-des-armes">#</doc-anchor-trigger>
+        <span>Liste des armes</span>
+    </h1>
+</doc-anchor-target>
+<p>Commande pour donner une arme : <code v-pre>giveweapon &lt;id&gt; &lt;nom_arme&gt; &lt;munitions&gt;</code></p>
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable">
+<thead>
+<tr>
+<th>Image</th>
+<th>Nom (clé)</th>
+<th>Label</th>
+<th>Type</th>
+<th>Rareté</th>
+<th>Commande</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>—</td>
+<td><code v-pre>atw12</code></td>
+<td>Lance</td>
+<td>item_equip_weapon_spear</td>
+<td>common</td>
+<td><code v-pre>giveweapon me atw12 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atw20</code></td>
+<td>arrow</td>
+<td>item_equip_weapon_arrow</td>
+<td>common</td>
+<td><code v-pre>giveweapon me atw20 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwp1</code></td>
+<td>Sword 1</td>
+<td>item_equip_weapon_sword</td>
+<td>common</td>
+<td><code v-pre>giveweapon me atwwp1 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwp2</code></td>
+<td>Sword 2</td>
+<td>item_equip_weapon_sword</td>
+<td>common</td>
+<td><code v-pre>giveweapon me atwwp2 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwp3</code></td>
+<td>Sword 3</td>
+<td>item_equip_weapon_sword</td>
+<td>rare</td>
+<td><code v-pre>giveweapon me atwwp3 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwp4</code></td>
+<td>Sword 4</td>
+<td>item_equip_weapon_sword</td>
+<td>rare</td>
+<td><code v-pre>giveweapon me atwwp4 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwp5</code></td>
+<td>harp 1</td>
+<td>item_equip_weapon_bow</td>
+<td>epic</td>
+<td><code v-pre>giveweapon me atwwp5 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwp6</code></td>
+<td>sicsickle 1</td>
+<td>item_equip_weapon_spear</td>
+<td>epic</td>
+<td><code v-pre>giveweapon me atwwp6 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwp7</code></td>
+<td>spear 1</td>
+<td>item_equip_weapon_spear</td>
+<td>legendary</td>
+<td><code v-pre>giveweapon me atwwp7 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwp8</code></td>
+<td>staff 1</td>
+<td>item_equip_weapon_spear</td>
+<td>legendary</td>
+<td><code v-pre>giveweapon me atwwp8 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwp9</code></td>
+<td>umbrella</td>
+<td>item_equip_weapon_spear</td>
+<td>super_legendary</td>
+<td><code v-pre>giveweapon me atwwp9 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwp10</code></td>
+<td>bow 1</td>
+<td>item_equip_weapon_bow</td>
+<td>super_legendary</td>
+<td><code v-pre>giveweapon me atwwp10 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwp11</code></td>
+<td>staff 2</td>
+<td>item_equip_weapon_spear</td>
+<td>common</td>
+<td><code v-pre>giveweapon me atwwp11 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwp12</code></td>
+<td>Épée</td>
+<td>item_equip_weapon_sword</td>
+<td>common</td>
+<td><code v-pre>giveweapon me atwwp12 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwp13</code></td>
+<td>Arc</td>
+<td>item_equip_weapon_bow</td>
+<td>common</td>
+<td><code v-pre>giveweapon me atwwp13 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwp14</code></td>
+<td>Fan</td>
+<td>item_equip_weapon_fan</td>
+<td>common</td>
+<td><code v-pre>giveweapon me atwwp14 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwp15</code></td>
+<td>Sword 5</td>
+<td>item_equip_weapon_sword</td>
+<td>common</td>
+<td><code v-pre>giveweapon me atwwp15 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwp16</code></td>
+<td>Sword 6</td>
+<td>item_equip_weapon_sword</td>
+<td>common</td>
+<td><code v-pre>giveweapon me atwwp16 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwp17</code></td>
+<td>Sword 7</td>
+<td>item_equip_weapon_sword</td>
+<td>common</td>
+<td><code v-pre>giveweapon me atwwp17 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwp18</code></td>
+<td>Sword 8</td>
+<td>item_equip_weapon_sword</td>
+<td>common</td>
+<td><code v-pre>giveweapon me atwwp18 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwp19</code></td>
+<td>Sword 9</td>
+<td>item_equip_weapon_sword</td>
+<td>common</td>
+<td><code v-pre>giveweapon me atwwp19 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwp20</code></td>
+<td>Sword 10</td>
+<td>item_equip_weapon_sword</td>
+<td>common</td>
+<td><code v-pre>giveweapon me atwwp20 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwp21</code></td>
+<td>Sword 11</td>
+<td>item_equip_weapon_sword</td>
+<td>common</td>
+<td><code v-pre>giveweapon me atwwp21 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwp22</code></td>
+<td>Sword 12</td>
+<td>item_equip_weapon_sword</td>
+<td>common</td>
+<td><code v-pre>giveweapon me atwwp22 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwp23</code></td>
+<td>Sword 13</td>
+<td>item_equip_weapon_sword</td>
+<td>common</td>
+<td><code v-pre>giveweapon me atwwp23 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwp24</code></td>
+<td>Sword 14</td>
+<td>item_equip_weapon_sword</td>
+<td>common</td>
+<td><code v-pre>giveweapon me atwwp24 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwp25</code></td>
+<td>Sword 15</td>
+<td>item_equip_weapon_sword</td>
+<td>common</td>
+<td><code v-pre>giveweapon me atwwp25 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwp26</code></td>
+<td>Sword 16</td>
+<td>item_equip_weapon_sword</td>
+<td>common</td>
+<td><code v-pre>giveweapon me atwwp26 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwp27</code></td>
+<td>Sword 17</td>
+<td>item_equip_weapon_sword</td>
+<td>common</td>
+<td><code v-pre>giveweapon me atwwp27 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwp28</code></td>
+<td>Sword 18</td>
+<td>item_equip_weapon_sword</td>
+<td>common</td>
+<td><code v-pre>giveweapon me atwwp28 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwp29</code></td>
+<td>Sword 19</td>
+<td>item_equip_weapon_sword</td>
+<td>common</td>
+<td><code v-pre>giveweapon me atwwp29 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwp30</code></td>
+<td>Sword 20</td>
+<td>item_equip_weapon_sword</td>
+<td>common</td>
+<td><code v-pre>giveweapon me atwwp30 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwp31</code></td>
+<td>Sword 21</td>
+<td>item_equip_weapon_sword</td>
+<td>common</td>
+<td><code v-pre>giveweapon me atwwp31 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwp32</code></td>
+<td>Sword 22</td>
+<td>item_equip_weapon_sword</td>
+<td>common</td>
+<td><code v-pre>giveweapon me atwwp32 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwp33</code></td>
+<td>Sword 23</td>
+<td>item_equip_weapon_sword</td>
+<td>common</td>
+<td><code v-pre>giveweapon me atwwp33 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwp34</code></td>
+<td>Club 1</td>
+<td>item_equip_weapon_sword</td>
+<td>common</td>
+<td><code v-pre>giveweapon me atwwp34 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwp35</code></td>
+<td>Flute Moon</td>
+<td>item_equip_weapon_sword</td>
+<td>common</td>
+<td><code v-pre>giveweapon me atwwp35 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwp36</code></td>
+<td>Flute_Sun</td>
+<td>item_equip_weapon_sword</td>
+<td>common</td>
+<td><code v-pre>giveweapon me atwwp36 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwp37</code></td>
+<td>Harp 1</td>
+<td>item_equip_weapon_sword</td>
+<td>common</td>
+<td><code v-pre>giveweapon me atwwp37 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwp38</code></td>
+<td>Harp 2</td>
+<td>item_equip_weapon_sword</td>
+<td>common</td>
+<td><code v-pre>giveweapon me atwwp38 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwp39</code></td>
+<td>Sicsickle Ruby</td>
+<td>item_equip_weapon_spear</td>
+<td>common</td>
+<td><code v-pre>giveweapon me atwwp39 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwp40</code></td>
+<td>Darkrose</td>
+<td>item_equip_weapon_sword</td>
+<td>common</td>
+<td><code v-pre>giveweapon me atwwp40 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwp41</code></td>
+<td>Darkrose1</td>
+<td>item_equip_weapon_sword</td>
+<td>common</td>
+<td><code v-pre>giveweapon me atwwp41 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwp42</code></td>
+<td>Rose Shield</td>
+<td>item_equip_weapon_sword</td>
+<td>common</td>
+<td><code v-pre>giveweapon me atwwp42 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwp43</code></td>
+<td>Rose Sword</td>
+<td>item_equip_weapon_sword</td>
+<td>common</td>
+<td><code v-pre>giveweapon me atwwp43 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwp44</code></td>
+<td>Rose Sword 1</td>
+<td>item_equip_weapon_sword</td>
+<td>common</td>
+<td><code v-pre>giveweapon me atwwp44 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwp45</code></td>
+<td>Onmyouji</td>
+<td>item_equip_weapon_sword</td>
+<td>common</td>
+<td><code v-pre>giveweapon me atwwp45 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwp46</code></td>
+<td>Umbrella Rain</td>
+<td>item_equip_weapon_sword</td>
+<td>common</td>
+<td><code v-pre>giveweapon me atwwp46 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwp47</code></td>
+<td>Umbrella Summer1</td>
+<td>item_equip_weapon_sword</td>
+<td>common</td>
+<td><code v-pre>giveweapon me atwwp47 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwp48</code></td>
+<td>Umbrella Summer2</td>
+<td>item_equip_weapon_sword</td>
+<td>common</td>
+<td><code v-pre>giveweapon me atwwp48 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwp49</code></td>
+<td>Staff 3</td>
+<td>item_equip_weapon_spear</td>
+<td>common</td>
+<td><code v-pre>giveweapon me atwwp49 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwp50</code></td>
+<td>Staff 4</td>
+<td>item_equip_weapon_fan</td>
+<td>common</td>
+<td><code v-pre>giveweapon me atwwp50 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwp51</code></td>
+<td>Zhaoyun</td>
+<td>item_equip_weapon_spear</td>
+<td>common</td>
+<td><code v-pre>giveweapon me atwwp51 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwp52</code></td>
+<td>jwe9</td>
+<td>item_equip_weapon_fan</td>
+<td>common</td>
+<td><code v-pre>giveweapon me atwwp52 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwp53</code></td>
+<td>jwe1</td>
+<td>item_equip_weapon_spear</td>
+<td>common</td>
+<td><code v-pre>giveweapon me atwwp53 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwp54</code></td>
+<td>jwe3</td>
+<td>item_equip_weapon_sword</td>
+<td>common</td>
+<td><code v-pre>giveweapon me atwwp54 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwp55</code></td>
+<td>jwp14</td>
+<td>item_equip_weapon_sword</td>
+<td>common</td>
+<td><code v-pre>giveweapon me atwwp55 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwp56</code></td>
+<td>jwp16_2</td>
+<td>item_equip_weapon_sword</td>
+<td>common</td>
+<td><code v-pre>giveweapon me atwwp56 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwp57</code></td>
+<td>jwp17</td>
+<td>item_equip_weapon_sword</td>
+<td>common</td>
+<td><code v-pre>giveweapon me atwwp57 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwp58</code></td>
+<td>jwp17_2</td>
+<td>item_equip_weapon_sword</td>
+<td>common</td>
+<td><code v-pre>giveweapon me atwwp58 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwp59</code></td>
+<td>jwp19</td>
+<td>item_equip_weapon_sword</td>
+<td>common</td>
+<td><code v-pre>giveweapon me atwwp59 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwp60</code></td>
+<td>jwp19_2</td>
+<td>item_equip_weapon_sword</td>
+<td>common</td>
+<td><code v-pre>giveweapon me atwwp60 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwp61</code></td>
+<td>jwe7</td>
+<td>item_equip_weapon_sword</td>
+<td>common</td>
+<td><code v-pre>giveweapon me atwwp61 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwp62</code></td>
+<td>jwe10</td>
+<td>item_equip_weapon_sword</td>
+<td>common</td>
+<td><code v-pre>giveweapon me atwwp62 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwp63</code></td>
+<td>jwe11</td>
+<td>item_equip_weapon_sword</td>
+<td>common</td>
+<td><code v-pre>giveweapon me atwwp63 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwp64</code></td>
+<td>jwe14</td>
+<td>item_equip_weapon_sword</td>
+<td>common</td>
+<td><code v-pre>giveweapon me atwwp64 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwp65</code></td>
+<td>jwp10</td>
+<td>item_equip_weapon_sword</td>
+<td>common</td>
+<td><code v-pre>giveweapon me atwwp65 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwp66</code></td>
+<td>spiritus_p</td>
+<td>item_equip_weapon_sword</td>
+<td>common</td>
+<td><code v-pre>giveweapon me atwwp66 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwp67</code></td>
+<td>jwe4</td>
+<td>item_equip_weapon_bow</td>
+<td>common</td>
+<td><code v-pre>giveweapon me atwwp67 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwp68</code></td>
+<td>jwe12</td>
+<td>item_equip_weapon_bow</td>
+<td>common</td>
+<td><code v-pre>giveweapon me atwwp68 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwp69</code></td>
+<td>jwe2</td>
+<td>item_equip_weapon_spear</td>
+<td>common</td>
+<td><code v-pre>giveweapon me atwwp69 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwp70</code></td>
+<td>jwe6</td>
+<td>item_equip_weapon_spear</td>
+<td>common</td>
+<td><code v-pre>giveweapon me atwwp70 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwp71</code></td>
+<td>jwe13</td>
+<td>item_equip_weapon_spear</td>
+<td>common</td>
+<td><code v-pre>giveweapon me atwwp71 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwp72</code></td>
+<td>jwe15</td>
+<td>item_equip_weapon_spear</td>
+<td>common</td>
+<td><code v-pre>giveweapon me atwwp72 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwp73</code></td>
+<td>jwe16</td>
+<td>item_equip_weapon_spear</td>
+<td>common</td>
+<td><code v-pre>giveweapon me atwwp73 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwp74</code></td>
+<td>jwe17</td>
+<td>item_equip_weapon_spear</td>
+<td>common</td>
+<td><code v-pre>giveweapon me atwwp74 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwp75</code></td>
+<td>jwe18</td>
+<td>item_equip_weapon_spear</td>
+<td>common</td>
+<td><code v-pre>giveweapon me atwwp75 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwp76</code></td>
+<td>jwe19</td>
+<td>item_equip_weapon_spear</td>
+<td>common</td>
+<td><code v-pre>giveweapon me atwwp76 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwp77</code></td>
+<td>jwe20</td>
+<td>item_equip_weapon_spear</td>
+<td>common</td>
+<td><code v-pre>giveweapon me atwwp77 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwp78</code></td>
+<td>jwe21</td>
+<td>item_equip_weapon_spear</td>
+<td>common</td>
+<td><code v-pre>giveweapon me atwwp78 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwp79</code></td>
+<td>jwp25</td>
+<td>item_equip_weapon_spear</td>
+<td>common</td>
+<td><code v-pre>giveweapon me atwwp79 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwp80</code></td>
+<td>jwe5</td>
+<td>item_equip_weapon_spear</td>
+<td>common</td>
+<td><code v-pre>giveweapon me atwwp80 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwp81</code></td>
+<td>jwd12</td>
+<td>item_equip_weapon_sword</td>
+<td>common</td>
+<td><code v-pre>giveweapon me atwwp81 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwp82</code></td>
+<td>jwd13</td>
+<td>item_equip_weapon_sword</td>
+<td>common</td>
+<td><code v-pre>giveweapon me atwwp82 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwp83</code></td>
+<td>jwd5</td>
+<td>item_equip_weapon_</td>
+<td>common</td>
+<td><code v-pre>giveweapon me atwwp83 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwp84</code></td>
+<td>jwd5</td>
+<td>item_equip_weapon_bow</td>
+<td>common</td>
+<td><code v-pre>giveweapon me atwwp84 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwp85</code></td>
+<td>jwd4</td>
+<td>item_equip_weapon_sword</td>
+<td>common</td>
+<td><code v-pre>giveweapon me atwwp85 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwp94</code></td>
+<td>sakurafan</td>
+<td>item_equip_weapon_fan</td>
+<td>common</td>
+<td><code v-pre>giveweapon me atwwp94 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwp</code></td>
+<td>atwwp</td>
+<td>item_equip_weapon_</td>
+<td>common</td>
+<td><code v-pre>giveweapon me atwwp 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwp</code></td>
+<td>atwwp</td>
+<td>item_equip_weapon_</td>
+<td>common</td>
+<td><code v-pre>giveweapon me atwwp 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwp</code></td>
+<td>atwwp</td>
+<td>item_equip_weapon_</td>
+<td>common</td>
+<td><code v-pre>giveweapon me atwwp 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwp</code></td>
+<td>atwwp</td>
+<td>item_equip_weapon_</td>
+<td>common</td>
+<td><code v-pre>giveweapon me atwwp 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwp</code></td>
+<td>atwwp</td>
+<td>item_equip_weapon_</td>
+<td>common</td>
+<td><code v-pre>giveweapon me atwwp 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwpsw1</code></td>
+<td>Iron Blade</td>
+<td>item_equip_weapon_sword</td>
+<td>super_legendary</td>
+<td><code v-pre>giveweapon me atwwpsw1 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwpsw1_1</code></td>
+<td>Iron Blade</td>
+<td>item_equip_weapon_sword</td>
+<td>super_legendary</td>
+<td><code v-pre>giveweapon me atwwpsw1_1 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwpsw1_2</code></td>
+<td>Iron Blade</td>
+<td>item_equip_weapon_sword</td>
+<td>super_legendary</td>
+<td><code v-pre>giveweapon me atwwpsw1_2 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwpsw1_3</code></td>
+<td>Iron Blade</td>
+<td>item_equip_weapon_sword</td>
+<td>super_legendary</td>
+<td><code v-pre>giveweapon me atwwpsw1_3 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwpsw1_4</code></td>
+<td>Iron Blade</td>
+<td>item_equip_weapon_sword</td>
+<td>super_legendary</td>
+<td><code v-pre>giveweapon me atwwpsw1_4 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwpsw1_5</code></td>
+<td>Iron Blade</td>
+<td>item_equip_weapon_sword</td>
+<td>super_legendary</td>
+<td><code v-pre>giveweapon me atwwpsw1_5 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwpsw1_6</code></td>
+<td>Iron Blade</td>
+<td>item_equip_weapon_sword</td>
+<td>super_legendary</td>
+<td><code v-pre>giveweapon me atwwpsw1_6 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwpsw1_7</code></td>
+<td>Iron Blade</td>
+<td>item_equip_weapon_sword</td>
+<td>super_legendary</td>
+<td><code v-pre>giveweapon me atwwpsw1_7 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwpsw2</code></td>
+<td>Wood Club</td>
+<td>item_equip_weapon_sword</td>
+<td>super_legendary</td>
+<td><code v-pre>giveweapon me atwwpsw2 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwpsw2_1</code></td>
+<td>Wood Club</td>
+<td>item_equip_weapon_sword</td>
+<td>super_legendary</td>
+<td><code v-pre>giveweapon me atwwpsw2_1 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwpsw2_2</code></td>
+<td>Wood Club</td>
+<td>item_equip_weapon_sword</td>
+<td>super_legendary</td>
+<td><code v-pre>giveweapon me atwwpsw2_2 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwpsw2_3</code></td>
+<td>Wood Club</td>
+<td>item_equip_weapon_sword</td>
+<td>super_legendary</td>
+<td><code v-pre>giveweapon me atwwpsw2_3 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwpsw2_4</code></td>
+<td>Wood Club</td>
+<td>item_equip_weapon_sword</td>
+<td>super_legendary</td>
+<td><code v-pre>giveweapon me atwwpsw2_4 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwpsw2_5</code></td>
+<td>Wood Club</td>
+<td>item_equip_weapon_sword</td>
+<td>super_legendary</td>
+<td><code v-pre>giveweapon me atwwpsw2_5 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwpsw2_6</code></td>
+<td>Wood Club</td>
+<td>item_equip_weapon_sword</td>
+<td>super_legendary</td>
+<td><code v-pre>giveweapon me atwwpsw2_6 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwpsw2_7</code></td>
+<td>Wood Club</td>
+<td>item_equip_weapon_sword</td>
+<td>super_legendary</td>
+<td><code v-pre>giveweapon me atwwpsw2_7 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwpsw3</code></td>
+<td>Wood Sword</td>
+<td>item_equip_weapon_sword</td>
+<td>super_legendary</td>
+<td><code v-pre>giveweapon me atwwpsw3 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwpsw3_1</code></td>
+<td>Wood Sword</td>
+<td>item_equip_weapon_sword</td>
+<td>super_legendary</td>
+<td><code v-pre>giveweapon me atwwpsw3_1 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwpsw3_2</code></td>
+<td>Wood Sword</td>
+<td>item_equip_weapon_sword</td>
+<td>super_legendary</td>
+<td><code v-pre>giveweapon me atwwpsw3_2 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwpsw3_3</code></td>
+<td>Wood Sword</td>
+<td>item_equip_weapon_sword</td>
+<td>super_legendary</td>
+<td><code v-pre>giveweapon me atwwpsw3_3 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwpsw3_4</code></td>
+<td>Wood Sword</td>
+<td>item_equip_weapon_sword</td>
+<td>super_legendary</td>
+<td><code v-pre>giveweapon me atwwpsw3_4 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwpsw3_5</code></td>
+<td>Wood Sword</td>
+<td>item_equip_weapon_sword</td>
+<td>super_legendary</td>
+<td><code v-pre>giveweapon me atwwpsw3_5 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwpsw3_6</code></td>
+<td>Wood Sword</td>
+<td>item_equip_weapon_sword</td>
+<td>super_legendary</td>
+<td><code v-pre>giveweapon me atwwpsw3_6 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwpsw3_7</code></td>
+<td>Wood Sword</td>
+<td>item_equip_weapon_sword</td>
+<td>super_legendary</td>
+<td><code v-pre>giveweapon me atwwpsw3_7 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwpsw4</code></td>
+<td>Wood Katana</td>
+<td>item_equip_weapon_sword</td>
+<td>super_legendary</td>
+<td><code v-pre>giveweapon me atwwpsw4 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwpsw4_1</code></td>
+<td>Wood Katana</td>
+<td>item_equip_weapon_sword</td>
+<td>super_legendary</td>
+<td><code v-pre>giveweapon me atwwpsw4_1 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwpsw4_2</code></td>
+<td>Wood Katana</td>
+<td>item_equip_weapon_sword</td>
+<td>super_legendary</td>
+<td><code v-pre>giveweapon me atwwpsw4_2 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwpsw4_3</code></td>
+<td>Wood Katana</td>
+<td>item_equip_weapon_sword</td>
+<td>super_legendary</td>
+<td><code v-pre>giveweapon me atwwpsw4_3 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwpsw4_4</code></td>
+<td>Wood Katana</td>
+<td>item_equip_weapon_sword</td>
+<td>super_legendary</td>
+<td><code v-pre>giveweapon me atwwpsw4_4 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwpsw4_5</code></td>
+<td>Wood Katana</td>
+<td>item_equip_weapon_sword</td>
+<td>super_legendary</td>
+<td><code v-pre>giveweapon me atwwpsw4_5 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwpsw4_6</code></td>
+<td>Wood Katana</td>
+<td>item_equip_weapon_sword</td>
+<td>super_legendary</td>
+<td><code v-pre>giveweapon me atwwpsw4_6 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwpsw4_7</code></td>
+<td>Wood Katana</td>
+<td>item_equip_weapon_sword</td>
+<td>super_legendary</td>
+<td><code v-pre>giveweapon me atwwpsw4_7 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwpsw5</code></td>
+<td>Arc Sword</td>
+<td>item_equip_weapon_sword</td>
+<td>super_legendary</td>
+<td><code v-pre>giveweapon me atwwpsw5 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwpsw5_1</code></td>
+<td>Arc Sword</td>
+<td>item_equip_weapon_sword</td>
+<td>super_legendary</td>
+<td><code v-pre>giveweapon me atwwpsw5_1 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwpsw5_2</code></td>
+<td>Arc Sword</td>
+<td>item_equip_weapon_sword</td>
+<td>super_legendary</td>
+<td><code v-pre>giveweapon me atwwpsw5_2 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwpsw5_3</code></td>
+<td>Arc Sword</td>
+<td>item_equip_weapon_sword</td>
+<td>super_legendary</td>
+<td><code v-pre>giveweapon me atwwpsw5_3 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwpsw5_4</code></td>
+<td>Arc Sword</td>
+<td>item_equip_weapon_sword</td>
+<td>super_legendary</td>
+<td><code v-pre>giveweapon me atwwpsw5_4 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwpsw5_5</code></td>
+<td>Arc Sword</td>
+<td>item_equip_weapon_sword</td>
+<td>super_legendary</td>
+<td><code v-pre>giveweapon me atwwpsw5_5 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwpsw5_6</code></td>
+<td>Arc Sword</td>
+<td>item_equip_weapon_sword</td>
+<td>super_legendary</td>
+<td><code v-pre>giveweapon me atwwpsw5_6 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwpsw5_7</code></td>
+<td>Arc Sword</td>
+<td>item_equip_weapon_sword</td>
+<td>super_legendary</td>
+<td><code v-pre>giveweapon me atwwpsw5_7 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwnsw1</code></td>
+<td>Ob Sword</td>
+<td>item_equip_weapon_sword</td>
+<td>common</td>
+<td><code v-pre>giveweapon me atwnsw1 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwnsw1_1</code></td>
+<td>Birh Sword</td>
+<td>item_equip_weapon_sword</td>
+<td>common</td>
+<td><code v-pre>giveweapon me atwnsw1_1 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwnsw1_2</code></td>
+<td>Bamboo Sword</td>
+<td>item_equip_weapon_sword</td>
+<td>common</td>
+<td><code v-pre>giveweapon me atwnsw1_2 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwnsw1_3</code></td>
+<td>Oak Sword</td>
+<td>item_equip_weapon_sword</td>
+<td>common</td>
+<td><code v-pre>giveweapon me atwnsw1_3 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwnsw1_4</code></td>
+<td>Jungle Sword</td>
+<td>item_equip_weapon_sword</td>
+<td>common</td>
+<td><code v-pre>giveweapon me atwnsw1_4 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwnsw1_5</code></td>
+<td>Darkwood Sword</td>
+<td>item_equip_weapon_sword</td>
+<td>common</td>
+<td><code v-pre>giveweapon me atwnsw1_5 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwnsw1_6</code></td>
+<td>Whitewood Sword</td>
+<td>item_equip_weapon_sword</td>
+<td>common</td>
+<td><code v-pre>giveweapon me atwnsw1_6 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwnsw1_7</code></td>
+<td>wood Sword</td>
+<td>item_equip_weapon_sword</td>
+<td>common</td>
+<td><code v-pre>giveweapon me atwnsw1_7 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwnnsw1</code></td>
+<td>Ob Sword</td>
+<td>item_equip_weapon_sword</td>
+<td>common</td>
+<td><code v-pre>giveweapon me atwnnsw1 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwp2sw1a</code></td>
+<td>Ragespike 1A</td>
+<td>item_equip_weapon_sword</td>
+<td>common</td>
+<td><code v-pre>giveweapon me atwwp2sw1a 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwp2sw1b</code></td>
+<td>Ragespike 1B</td>
+<td>item_equip_weapon_sword</td>
+<td>common</td>
+<td><code v-pre>giveweapon me atwwp2sw1b 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwpstaf1</code></td>
+<td>Wood Staff</td>
+<td>item_equip_weapon_staff</td>
+<td>super_legendary</td>
+<td><code v-pre>giveweapon me atwwpstaf1 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwpstaf1_1</code></td>
+<td>Wood Staff</td>
+<td>item_equip_weapon_staff</td>
+<td>super_legendary</td>
+<td><code v-pre>giveweapon me atwwpstaf1_1 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwpstaf1_2</code></td>
+<td>Wood Staff</td>
+<td>item_equip_weapon_staff</td>
+<td>super_legendary</td>
+<td><code v-pre>giveweapon me atwwpstaf1_2 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwpstaf1_3</code></td>
+<td>Wood Staff</td>
+<td>item_equip_weapon_staff</td>
+<td>super_legendary</td>
+<td><code v-pre>giveweapon me atwwpstaf1_3 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwnstaf1</code></td>
+<td>Timber Staff</td>
+<td>item_equip_weapon_staff</td>
+<td>common</td>
+<td><code v-pre>giveweapon me atwnstaf1 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwnstaf1_1</code></td>
+<td>Darkwood Staff</td>
+<td>item_equip_weapon_staff</td>
+<td>common</td>
+<td><code v-pre>giveweapon me atwnstaf1_1 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwnstaf1_2</code></td>
+<td>Birh Staff</td>
+<td>item_equip_weapon_staff</td>
+<td>common</td>
+<td><code v-pre>giveweapon me atwnstaf1_2 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwnstaf1_3</code></td>
+<td>Jungle Staff</td>
+<td>item_equip_weapon_staff</td>
+<td>common</td>
+<td><code v-pre>giveweapon me atwnstaf1_3 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwnnstaf1</code></td>
+<td>Timber Staff</td>
+<td>item_equip_weapon_staff</td>
+<td>common</td>
+<td><code v-pre>giveweapon me atwnnstaf1 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwpsws1a</code></td>
+<td>Iron Sword</td>
+<td>item_equip_weapon_sword</td>
+<td>common</td>
+<td><code v-pre>giveweapon me atwwpsws1a 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwpsws1b</code></td>
+<td>Iron Shield</td>
+<td>item_equip_weapon_second</td>
+<td>common</td>
+<td><code v-pre>giveweapon me atwwpsws1b 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwpbsw1</code></td>
+<td>Big Sword</td>
+<td>item_equip_weapon_bigsword</td>
+<td>super_legendary</td>
+<td><code v-pre>giveweapon me atwwpbsw1 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwpbsw1_1</code></td>
+<td>Big Sword</td>
+<td>item_equip_weapon_bigsword</td>
+<td>super_legendary</td>
+<td><code v-pre>giveweapon me atwwpbsw1_1 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwpbsw1_2</code></td>
+<td>Big Sword</td>
+<td>item_equip_weapon_bigsword</td>
+<td>super_legendary</td>
+<td><code v-pre>giveweapon me atwwpbsw1_2 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwpbsw1_3</code></td>
+<td>Big Sword</td>
+<td>item_equip_weapon_bigsword</td>
+<td>super_legendary</td>
+<td><code v-pre>giveweapon me atwwpbsw1_3 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwpbsw1_4</code></td>
+<td>Big Sword</td>
+<td>item_equip_weapon_bigsword</td>
+<td>super_legendary</td>
+<td><code v-pre>giveweapon me atwwpbsw1_4 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwpbsw2</code></td>
+<td>Titan Sword</td>
+<td>item_equip_weapon_bigsword</td>
+<td>super_legendary</td>
+<td><code v-pre>giveweapon me atwwpbsw2 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwpbsw2_1</code></td>
+<td>Titan Sword</td>
+<td>item_equip_weapon_bigsword</td>
+<td>super_legendary</td>
+<td><code v-pre>giveweapon me atwwpbsw2_1 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwpbsw2_2</code></td>
+<td>Titan Sword</td>
+<td>item_equip_weapon_bigsword</td>
+<td>super_legendary</td>
+<td><code v-pre>giveweapon me atwwpbsw2_2 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwpbsw2_3</code></td>
+<td>Titan Sword</td>
+<td>item_equip_weapon_bigsword</td>
+<td>super_legendary</td>
+<td><code v-pre>giveweapon me atwwpbsw2_3 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwpbsw2_4</code></td>
+<td>Titan Sword</td>
+<td>item_equip_weapon_bigsword</td>
+<td>super_legendary</td>
+<td><code v-pre>giveweapon me atwwpbsw2_4 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwpbsw3</code></td>
+<td>Giant Sword</td>
+<td>item_equip_weapon_bigsword</td>
+<td>super_legendary</td>
+<td><code v-pre>giveweapon me atwwpbsw3 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwpbsw3_1</code></td>
+<td>Giant Sword</td>
+<td>item_equip_weapon_bigsword</td>
+<td>super_legendary</td>
+<td><code v-pre>giveweapon me atwwpbsw3_1 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwpbsw3_2</code></td>
+<td>Giant Sword</td>
+<td>item_equip_weapon_bigsword</td>
+<td>super_legendary</td>
+<td><code v-pre>giveweapon me atwwpbsw3_2 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwpbsw3_3</code></td>
+<td>Giant Sword</td>
+<td>item_equip_weapon_bigsword</td>
+<td>super_legendary</td>
+<td><code v-pre>giveweapon me atwwpbsw3_3 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwpbsw3_4</code></td>
+<td>Giant Sword</td>
+<td>item_equip_weapon_bigsword</td>
+<td>super_legendary</td>
+<td><code v-pre>giveweapon me atwwpbsw3_4 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwnbsw1</code></td>
+<td>Bloodweep</td>
+<td>item_equip_weapon_bigsword</td>
+<td>common</td>
+<td><code v-pre>giveweapon me atwnbsw1 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwnbsw1_1</code></td>
+<td>redweep</td>
+<td>item_equip_weapon_bigsword</td>
+<td>common</td>
+<td><code v-pre>giveweapon me atwnbsw1_1 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwnbsw1_2</code></td>
+<td>Darkweep</td>
+<td>item_equip_weapon_bigsword</td>
+<td>common</td>
+<td><code v-pre>giveweapon me atwnbsw1_2 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwnbsw1_3</code></td>
+<td>Brightweep</td>
+<td>item_equip_weapon_bigsword</td>
+<td>common</td>
+<td><code v-pre>giveweapon me atwnbsw1_3 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwnbsw1_4</code></td>
+<td>Bloodweep</td>
+<td>item_equip_weapon_bigsword</td>
+<td>common</td>
+<td><code v-pre>giveweapon me atwnbsw1_4 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwnnbsw1</code></td>
+<td>Bloodweep</td>
+<td>item_equip_weapon_bigsword</td>
+<td>common</td>
+<td><code v-pre>giveweapon me atwnnbsw1 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwpclu1</code></td>
+<td>Wood Club</td>
+<td>item_equip_weapon_sword</td>
+<td>common</td>
+<td><code v-pre>giveweapon me atwwpclu1 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwpclu2</code></td>
+<td>Nirvana</td>
+<td>item_equip_weapon_sword</td>
+<td>common</td>
+<td><code v-pre>giveweapon me atwwpclu2 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwpspe1</code></td>
+<td>Iron spear</td>
+<td>item_equip_weapon_spear</td>
+<td>super_legendary</td>
+<td><code v-pre>giveweapon me atwwpspe1 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwpspe1_1</code></td>
+<td>Iron spear</td>
+<td>item_equip_weapon_spear</td>
+<td>super_legendary</td>
+<td><code v-pre>giveweapon me atwwpspe1_1 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwpspe1_2</code></td>
+<td>Iron spear</td>
+<td>item_equip_weapon_spear</td>
+<td>super_legendary</td>
+<td><code v-pre>giveweapon me atwwpspe1_2 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwpspe1_3</code></td>
+<td>Iron spear</td>
+<td>item_equip_weapon_spear</td>
+<td>super_legendary</td>
+<td><code v-pre>giveweapon me atwwpspe1_3 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwnspe1</code></td>
+<td>Ferric Spear</td>
+<td>item_equip_weapon_spear</td>
+<td>common</td>
+<td><code v-pre>giveweapon me atwnspe1 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwnspe1_1</code></td>
+<td>Wood Spear</td>
+<td>item_equip_weapon_spear</td>
+<td>common</td>
+<td><code v-pre>giveweapon me atwnspe1_1 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwnspe1_2</code></td>
+<td>Darkwood Spear</td>
+<td>item_equip_weapon_spear</td>
+<td>common</td>
+<td><code v-pre>giveweapon me atwnspe1_2 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwnspe1_3</code></td>
+<td>Oak Spear</td>
+<td>item_equip_weapon_spear</td>
+<td>common</td>
+<td><code v-pre>giveweapon me atwnspe1_3 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwnnspe1</code></td>
+<td>Ferric Spear</td>
+<td>item_equip_weapon_spear</td>
+<td>common</td>
+<td><code v-pre>giveweapon me atwnnspe1 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwpbow1</code></td>
+<td>Wood Bow</td>
+<td>item_equip_weapon_bow</td>
+<td>super_legendary</td>
+<td><code v-pre>giveweapon me atwwpbow1 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwpbow1_1</code></td>
+<td>Wood Bow</td>
+<td>item_equip_weapon_bow</td>
+<td>super_legendary</td>
+<td><code v-pre>giveweapon me atwwpbow1_1 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwpbow1_2</code></td>
+<td>Wood Bow</td>
+<td>item_equip_weapon_bow</td>
+<td>super_legendary</td>
+<td><code v-pre>giveweapon me atwwpbow1_2 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwpbow1_3</code></td>
+<td>Wood Bow</td>
+<td>item_equip_weapon_bow</td>
+<td>super_legendary</td>
+<td><code v-pre>giveweapon me atwwpbow1_3 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwpbow1_4</code></td>
+<td>Wood Bow</td>
+<td>item_equip_weapon_bow</td>
+<td>super_legendary</td>
+<td><code v-pre>giveweapon me atwwpbow1_4 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwpbow1_5</code></td>
+<td>Wood Bow</td>
+<td>item_equip_weapon_bow</td>
+<td>super_legendary</td>
+<td><code v-pre>giveweapon me atwwpbow1_5 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwnbow1</code></td>
+<td>Bamboo Bow</td>
+<td>item_equip_weapon_bow</td>
+<td>common</td>
+<td><code v-pre>giveweapon me atwnbow1 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwnbow1_1</code></td>
+<td>Wood Bow</td>
+<td>item_equip_weapon_bow</td>
+<td>common</td>
+<td><code v-pre>giveweapon me atwnbow1_1 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwnbow1_2</code></td>
+<td>Oak Bow</td>
+<td>item_equip_weapon_bow</td>
+<td>common</td>
+<td><code v-pre>giveweapon me atwnbow1_2 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwnbow1_3</code></td>
+<td>Whitewood Bow</td>
+<td>item_equip_weapon_bow</td>
+<td>common</td>
+<td><code v-pre>giveweapon me atwnbow1_3 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwnbow1_4</code></td>
+<td>Darkwood Bow</td>
+<td>item_equip_weapon_bow</td>
+<td>common</td>
+<td><code v-pre>giveweapon me atwnbow1_4 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwnbow1_5</code></td>
+<td>Jungle Bow</td>
+<td>item_equip_weapon_bow</td>
+<td>common</td>
+<td><code v-pre>giveweapon me atwnbow1_5 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwnnbow1</code></td>
+<td>Bamboo Bow</td>
+<td>item_equip_weapon_bow</td>
+<td>common</td>
+<td><code v-pre>giveweapon me atwnnbow1 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwpfan1</code></td>
+<td>Paper Fan</td>
+<td>item_equip_weapon_fan</td>
+<td>super_legendary</td>
+<td><code v-pre>giveweapon me atwwpfan1 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwpfan1_1</code></td>
+<td>Paper Fan</td>
+<td>item_equip_weapon_fan</td>
+<td>super_legendary</td>
+<td><code v-pre>giveweapon me atwwpfan1_1 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwpfan1_2</code></td>
+<td>Paper Fan</td>
+<td>item_equip_weapon_fan</td>
+<td>super_legendary</td>
+<td><code v-pre>giveweapon me atwwpfan1_2 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwpfan1_3</code></td>
+<td>Paper Fan</td>
+<td>item_equip_weapon_fan</td>
+<td>super_legendary</td>
+<td><code v-pre>giveweapon me atwwpfan1_3 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwpfan1_4</code></td>
+<td>Paper Fan</td>
+<td>item_equip_weapon_fan</td>
+<td>super_legendary</td>
+<td><code v-pre>giveweapon me atwwpfan1_4 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwpfan1_5</code></td>
+<td>Paper Fan</td>
+<td>item_equip_weapon_fan</td>
+<td>super_legendary</td>
+<td><code v-pre>giveweapon me atwwpfan1_5 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwpfan1_6</code></td>
+<td>Paper Fan</td>
+<td>item_equip_weapon_fan</td>
+<td>super_legendary</td>
+<td><code v-pre>giveweapon me atwwpfan1_6 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwnfan1</code></td>
+<td>Uka Fan</td>
+<td>item_equip_weapon_fan</td>
+<td>common</td>
+<td><code v-pre>giveweapon me atwnfan1 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwnfan1_1</code></td>
+<td>Leef Fan</td>
+<td>item_equip_weapon_fan</td>
+<td>common</td>
+<td><code v-pre>giveweapon me atwnfan1_1 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwnfan1_2</code></td>
+<td>Paper Fan</td>
+<td>item_equip_weapon_fan</td>
+<td>common</td>
+<td><code v-pre>giveweapon me atwnfan1_2 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwnfan1_3</code></td>
+<td>White Fan</td>
+<td>item_equip_weapon_fan</td>
+<td>common</td>
+<td><code v-pre>giveweapon me atwnfan1_3 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwnfan1_4</code></td>
+<td>Herb Fan</td>
+<td>item_equip_weapon_fan</td>
+<td>common</td>
+<td><code v-pre>giveweapon me atwnfan1_4 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwnfan1_5</code></td>
+<td>Normal Fan</td>
+<td>item_equip_weapon_fan</td>
+<td>common</td>
+<td><code v-pre>giveweapon me atwnfan1_5 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwnfan1_6</code></td>
+<td>Grass Fan</td>
+<td>item_equip_weapon_fan</td>
+<td>common</td>
+<td><code v-pre>giveweapon me atwnfan1_6 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwnnfan1</code></td>
+<td>Uka Fan</td>
+<td>item_equip_weapon_fan</td>
+<td>common</td>
+<td><code v-pre>giveweapon me atwnnfan1 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwpstk1</code></td>
+<td>Iron Sickle</td>
+<td>item_equip_weapon_sickle</td>
+<td>super_legendary</td>
+<td><code v-pre>giveweapon me atwwpstk1 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwpstk1_1</code></td>
+<td>Iron Sickle</td>
+<td>item_equip_weapon_sickle</td>
+<td>super_legendary</td>
+<td><code v-pre>giveweapon me atwwpstk1_1 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwpstk1_2</code></td>
+<td>Iron Sickle</td>
+<td>item_equip_weapon_sickle</td>
+<td>super_legendary</td>
+<td><code v-pre>giveweapon me atwwpstk1_2 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwpstk1_3</code></td>
+<td>Iron Sickle</td>
+<td>item_equip_weapon_sickle</td>
+<td>super_legendary</td>
+<td><code v-pre>giveweapon me atwwpstk1_3 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwnstk1</code></td>
+<td>Ferric Sickle</td>
+<td>item_equip_weapon_sickle</td>
+<td>common</td>
+<td><code v-pre>giveweapon me atwnstk1 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwnstk1_1</code></td>
+<td>Iron Sickle</td>
+<td>item_equip_weapon_sickle</td>
+<td>common</td>
+<td><code v-pre>giveweapon me atwnstk1_1 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwnstk1_2</code></td>
+<td>Silver Sickle</td>
+<td>item_equip_weapon_sickle</td>
+<td>common</td>
+<td><code v-pre>giveweapon me atwnstk1_2 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwnstk1_3</code></td>
+<td>Bronze Sickle</td>
+<td>item_equip_weapon_sickle</td>
+<td>common</td>
+<td><code v-pre>giveweapon me atwnstk1_3 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwnnstk1</code></td>
+<td>Ferric Sickle</td>
+<td>item_equip_weapon_sickle</td>
+<td>common</td>
+<td><code v-pre>giveweapon me atwnnstk1 100</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwall1.png" alt="Red Flower" /></td>
+<td><code v-pre>atwall1</code></td>
+<td>Red Flower</td>
+<td>item_equip_weapon_second</td>
+<td>super_legendary</td>
+<td><code v-pre>giveweapon me atwall1 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwall2</code></td>
+<td>atwall2</td>
+<td>item_equip_weapon_second</td>
+<td>common</td>
+<td><code v-pre>giveweapon me atwall2 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwall3</code></td>
+<td>atwall3</td>
+<td>item_equip_weapon_second</td>
+<td>common</td>
+<td><code v-pre>giveweapon me atwall3 100</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwnall1</code></td>
+<td>All 1</td>
+<td>item_equip_weapon_second</td>
+<td>common</td>
+<td><code v-pre>giveweapon me atwnall1 100</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+
+                                
+                                <!-- Required only on API pages -->
+                                <doc-toolbar-member-filter-no-results></doc-toolbar-member-filter-no-results>
+                            </div>
+                            <footer id="retype-content-footer" class="clear-both">
+                            
+                                <nav id="retype-nextprev" class="print:hidden flex mt-14">
+                                    <div class="w-1/2">
+                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-body-link border border-base-border hover:border-base-border-hover rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../cards/">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
+                                            <span>
+                                                <span class="block text-xs font-normal text-base-text-muted">Previous</span>
+                                                <span class="block mt-1">Cartes (Card) Eldoria</span>
+                                            </span>
+                                        </a>
+                                    </div>
+                            
+                                    <div class="w-1/2">
+                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-body-link border border-base-border hover:border-base-border-hover rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../items/">
+                                            <span>
+                                                <span class="block text-xs font-normal text-right text-base-text-muted">Next</span>
+                                                <span class="block mt-1">Liste des items</span>
+                                            </span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
+                                        </a>
+                                    </div>
+                                </nav>
+                            </footer>
+                        </main>
+                
+                        <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
+                            <footer class="flex flex-wrap items-center justify-between print:justify-center">
+                                <div id="retype-footer-links" class="print:hidden">
+                                    <ul class="flex flex-wrap items-center text-sm">
+                                    </ul>
+                                </div>
+                                <div id="retype-copyright" class="print:justify-center py-2 text-footer-text font-footer-link-weight text-sm leading-relaxed"><p>© Copyright 2026 Eldoria. Tous droits réservés.</p></div>
+                            </footer>
+                        </div>
+                    </div>
+                
+                    <!-- Rendered if sidebar right is enabled -->
+                    <!-- Sidebar right skeleton-->
+                    <div v-cloak class="fixed top-0 bottom-0 right-0 translate-x-full bg-sidebar-right-bg border-sidebar-right-border lg:sticky lg:border-l lg:shrink-0 lg:pt-6 lg:transform-none sm:w-1/2 lg:w-64 lg:z-0 md:w-104 sidebar-right skeleton">
+                        <div class="pl-5">
+                            <div class="w-32 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                            <div class="w-48 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                            <div class="w-40 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                        </div>
+                    </div>
+                
+                    <!-- User should be able to hide sidebar right -->
+                    <doc-sidebar-right v-cloak></doc-sidebar-right>
+                </div>
+
+            </div>
+        </div>
+    
+        <doc-search-mobile></doc-search-mobile>
+        <doc-back-to-top></doc-back-to-top>
+    </div>
+
+
+    <div id="retype-overlay-target"></div>
+
+    <script data-cfasync="false">window.__DOCS__ = { "title": "Liste des armes", level: 1, icon: "file", hasPrism: false, hasMermaid: false, hasMath: false, tocDepth: 23 }</script>
+</body>
+</html>

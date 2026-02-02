@@ -1,0 +1,4419 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.11.0.823382066958">
+
+    <!-- See retype.com -->
+    <meta name="generator" content="Retype 3.11.0">
+
+    <!-- Primary Meta Tags -->
+    <title>Liste des items</title>
+    <meta name="title" content="Liste des items">
+    <meta name="description" content="Commande pour donner un item : giveitem id nom_item quantité">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://eldoria-docs.example.com/items/">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://eldoria-docs.example.com/items/">
+    <meta property="og:title" content="Liste des items">
+    <meta property="og:description" content="Commande pour donner un item : giveitem id nom_item quantité">
+    <meta property="og:image" content="https://eldoria-docs.example.com/images/eldoria/astrovian-0ag_ujsq.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://eldoria-docs.example.com/items/">
+    <meta property="twitter:title" content="Liste des items">
+    <meta property="twitter:description" content="Commande pour donner un item : giveitem id nom_item quantité">
+    <meta property="twitter:image" content="https://eldoria-docs.example.com/images/eldoria/astrovian-0ag_ujsq.png">
+
+    <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
+
+    <link href="../resources/css/retype.css?v=3.11.0.823382066958" rel="stylesheet">
+
+    <script data-cfasync="false" src="../resources/js/config.js?v=3.11.0.823382066958" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../resources/js/retype.js?v=3.11.0" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=3.11.0.823382066958" data-turbo-eval="false" defer></script>
+</head>
+<body>
+    <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
+        <div class="absolute bottom-0 left-0" style="top: 5rem; right: 50%"></div>
+    
+        <header id="retype-header" class="sticky top-0 z-30 flex w-full h-16 bg-header-bg border-b border-header-border md:h-20">
+            <div class="container relative flex items-center justify-between pr-6 grow md:justify-start">
+                <!-- Mobile menu button skeleton -->
+                <button v-cloak class="skeleton retype-mobile-menu-button flex items-center justify-center shrink-0 overflow-hidden dark:text-white focus:outline-none rounded-full w-10 h-10 ml-3.5 md:hidden"><svg xmlns="http://www.w3.org/2000/svg" class="mb-px shrink-0" width="24" height="24" viewBox="0 0 24 24" role="presentation" style="margin-bottom: 0px;"><g fill="currentColor"><path d="M2 4h20v2H2zM2 11h20v2H2zM2 18h20v2H2z"></path></g></svg></button>
+                <div v-cloak id="retype-sidebar-left-toggle-button"></div>
+        
+                <!-- Logo -->
+                <div class="flex items-center justify-between h-full py-2 md:w-75">
+                    <div class="flex items-center px-2 md:px-6">
+                        <a id="retype-branding-logo" href="../" class="flex items-center leading-snug text-2xl">
+                            <span class="dark:text-white font-bold line-clamp-1 md:line-clamp-2">Eldoria</span>
+                        </a><span id="retype-branding-label" class="inline-flex mt-1 px-2 py-1 ml-4 text-xs font-medium leading-none items-center rounded-md bg-branding-label-bg text-branding-label-text ring-1 ring-branding-label-border ring-inset md:inline-block">Documentation</span>
+                    </div>
+        
+                    <span class="hidden h-8 border-r md:inline-block border-base-border"></span>
+                </div>
+        
+                <div class="flex justify-between md:grow">
+                    <!-- Top Nav -->
+                    <nav id="retype-header-nav" class="hidden md:flex">
+                        <ul class="flex flex-col mb-4 md:pl-16 md:mb-0 md:flex-row md:items-center">
+                            <li class="mr-6">
+                                <a class="py-2 md:mb-0 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text-weight hover:text-header-text-hover" href="../commands/">Commandes</a>
+                            </li>
+                            <li class="mr-6">
+                                <a class="py-2 md:mb-0 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text-weight hover:text-header-text-hover" href="../items/">Items</a>
+                            </li>
+                            <li class="mr-6">
+                                <a class="py-2 md:mb-0 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text-weight hover:text-header-text-hover" href="../weapons/">Armes</a>
+                            </li>
+                            <li class="mr-6">
+                                <a class="py-2 md:mb-0 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text-weight hover:text-header-text-hover" href="../cards/">Cartes</a>
+                            </li>
+                            <li class="mr-6">
+                                <a class="py-2 md:mb-0 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text-weight hover:text-header-text-hover" href="../resources/">Ressources</a>
+                            </li>
+        
+                        </ul>
+                    </nav>
+        
+                    <!-- Header Right Skeleton -->
+                    <div v-cloak class="flex justify-end grow skeleton">
+        
+                        <!-- Search input mock -->
+                        <div class="relative hidden w-40 lg:block lg:max-w-sm lg:ml-auto">
+                            <div class="absolute flex items-center justify-center h-full pl-3 dark:text-dark-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon-base" width="16" height="16" viewBox="0 0 24 24" aria-labelledby="icon" role="presentation" style="margin-bottom: 1px;"><g fill="currentColor" ><path d="M21.71 20.29l-3.68-3.68A8.963 8.963 0 0020 11c0-4.96-4.04-9-9-9s-9 4.04-9 9 4.04 9 9 9c2.12 0 4.07-.74 5.61-1.97l3.68 3.68c.2.19.45.29.71.29s.51-.1.71-.29c.39-.39.39-1.03 0-1.42zM4 11c0-3.86 3.14-7 7-7s7 3.14 7 7c0 1.92-.78 3.66-2.04 4.93-.01.01-.02.01-.02.01-.01.01-.01.01-.01.02A6.98 6.98 0 0111 18c-3.86 0-7-3.14-7-7z" ></path></g></svg>
+                            </div>
+                            <input class="w-full h-10 placeholder-search-placeholder transition-colors duration-200 ease-in bg-search-bg border border-transparent rounded md:text-sm hover:border-search-border-hover focus:outline-none focus:border-search-border-focus" style="padding: 0.625rem 0.75rem 0.625rem 2rem" type="text" placeholder="Search">
+                        </div>
+        
+                        <!-- Mobile search button -->
+                        <div class="flex items-center justify-center w-10 h-10 lg:hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="shrink-0 icon-base" width="20" height="20" viewBox="0 0 24 24" aria-labelledby="icon" role="presentation" style="margin-bottom: 0px;"><g fill="currentColor" ><path d="M21.71 20.29l-3.68-3.68A8.963 8.963 0 0020 11c0-4.96-4.04-9-9-9s-9 4.04-9 9 4.04 9 9 9c2.12 0 4.07-.74 5.61-1.97l3.68 3.68c.2.19.45.29.71.29s.51-.1.71-.29c.39-.39.39-1.03 0-1.42zM4 11c0-3.86 3.14-7 7-7s7 3.14 7 7c0 1.92-.78 3.66-2.04 4.93-.01.01-.02.01-.02.01-.01.01-.01.01-.01.02A6.98 6.98 0 0111 18c-3.86 0-7-3.14-7-7z" ></path></g></svg>
+                        </div>
+        
+                        <!-- Dark mode switch placeholder -->
+                        <div class="w-10 h-10 lg:ml-2"></div>
+        
+                        <!-- History button -->
+                        <div class="flex items-center justify-center w-10 h-10" style="margin-right: -0.625rem;">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="shrink-0 icon-base" width="22" height="22" viewBox="0 0 24 24" aria-labelledby="icon" role="presentation" style="margin-bottom: 0px;"><g fill="currentColor" ><g ><path d="M12.01 6.01c-.55 0-1 .45-1 1V12a1 1 0 00.4.8l3 2.22a.985.985 0 001.39-.2.996.996 0 00-.21-1.4l-2.6-1.92V7.01c.02-.55-.43-1-.98-1z"></path><path d="M12.01 1.91c-5.33 0-9.69 4.16-10.05 9.4l-.29-.26a.997.997 0 10-1.34 1.48l1.97 1.79c.19.17.43.26.67.26s.48-.09.67-.26l1.97-1.79a.997.997 0 10-1.34-1.48l-.31.28c.34-4.14 3.82-7.41 8.05-7.41 4.46 0 8.08 3.63 8.08 8.09s-3.63 8.08-8.08 8.08c-2.18 0-4.22-.85-5.75-2.4a.996.996 0 10-1.42 1.4 10.02 10.02 0 007.17 2.99c5.56 0 10.08-4.52 10.08-10.08.01-5.56-4.52-10.09-10.08-10.09z"></path></g></g></svg>
+                        </div>
+                    </div>
+        
+                    <div v-cloak class="flex justify-end grow">
+                        <div id="retype-mobile-search-button"></div>
+                        <doc-search-desktop></doc-search-desktop>
+        
+                        <doc-theme-switch class="lg:ml-2"></doc-theme-switch>
+                        <doc-history></doc-history>
+                    </div>
+                </div>
+            </div>
+        </header>
+    
+    
+        <div id="retype-container" class="container relative flex bg-white">
+            <!-- Sidebar Skeleton -->
+            <div v-cloak class="fixed flex flex-col shrink-0 duration-300 ease-in-out bg-sidebar-left-bg border-sidebar-left-border sidebar top-20 w-75 border-r h-screen md:sticky transition-transform skeleton">
+            
+                <div class="flex items-center h-16 px-6">
+                    <input class="w-full h-8 px-3 py-2 transition-colors duration-200 ease-linear bg-filter-bg border border-filter-border rounded shadow-none text-sm focus:outline-none focus:border-filter-border-focus" type="text" placeholder="Filter">
+                </div>
+            
+                <div class="pl-6 mt-1 mb-4">
+                    <div class="w-32 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                    <div class="w-48 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                    <div class="w-40 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                    <div class="w-32 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                    <div class="w-48 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                    <div class="w-40 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                </div>
+            
+                <div class="shrink-0 mt-auto bg-transparent dark:border-base-border">
+                    <a class="flex items-center justify-center flex-nowrap h-16 text-gray-350 dark:text-dark-400 hover:text-gray-600 dark:hover:text-dark-300 transition-colors duration-150 ease-in docs-powered-by" target="_blank" href="https://retype.com/" rel="noopener">
+                        <span class="text-xs whitespace-nowrap">Powered by</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="ml-2" fill="currentColor" width="96" height="20" overflow="visible"><path d="M0 0v20h13.59V0H0zm11.15 17.54H2.44V2.46h8.71v15.08zM15.8 20h2.44V4.67L15.8 2.22zM20.45 6.89V20h2.44V9.34z"/><g><path d="M40.16 8.44c0 1.49-.59 2.45-1.75 2.88l2.34 3.32h-2.53l-2.04-2.96h-1.43v2.96h-2.06V5.36h3.5c1.43 0 2.46.24 3.07.73s.9 1.27.9 2.35zm-2.48 1.1c.26-.23.38-.59.38-1.09 0-.5-.13-.84-.4-1.03s-.73-.28-1.39-.28h-1.54v2.75h1.5c.72 0 1.2-.12 1.45-.35zM51.56 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92h4.74v1.83h-6.79V5.36h6.64zM60.09 7.15v7.48h-2.06V7.15h-2.61V5.36h7.28v1.79h-2.61zM70.81 14.64h-2.06v-3.66l-3.19-5.61h2.23l1.99 3.45 1.99-3.45H74l-3.19 5.61v3.66zM83.99 6.19c.65.55.97 1.4.97 2.55s-.33 1.98-1 2.51-1.68.8-3.04.8h-1.23v2.59h-2.06V5.36h3.26c1.42 0 2.45.28 3.1.83zm-1.51 3.65c.25-.28.37-.69.37-1.22s-.16-.92-.48-1.14c-.32-.23-.82-.34-1.5-.34H79.7v3.12h1.38c.68 0 1.15-.14 1.4-.42zM95.85 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92H96v1.83h-6.79V5.36h6.64z"/></g></svg>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Sidebar component -->
+            <doc-sidebar v-cloak>
+                <template #sidebar-footer>
+                    <div class="shrink-0 mt-auto border-t md:bg-transparent md:border-none dark:border-base-border">
+            
+                        <div class="py-3 px-6 md:hidden border-b dark:border-base-border">
+                            <nav>
+                                <ul class="flex flex-wrap justify-center items-center">
+                                    <li class="mr-6">
+                                        <a class="block py-1 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text-weight hover:text-header-text-hover" href="../commands/">Commandes</a>
+                                    </li>
+                                    <li class="mr-6">
+                                        <a class="block py-1 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text-weight hover:text-header-text-hover" href="../items/">Items</a>
+                                    </li>
+                                    <li class="mr-6">
+                                        <a class="block py-1 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text-weight hover:text-header-text-hover" href="../weapons/">Armes</a>
+                                    </li>
+                                    <li class="mr-6">
+                                        <a class="block py-1 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text-weight hover:text-header-text-hover" href="../cards/">Cartes</a>
+                                    </li>
+                                    <li class="mr-6">
+                                        <a class="block py-1 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text-weight hover:text-header-text-hover" href="../resources/">Ressources</a>
+                                    </li>
+            
+                                </ul>
+                            </nav>
+                        </div>
+            
+                        <a class="flex items-center justify-center flex-nowrap h-16 text-gray-350 dark:text-dark-400 hover:text-gray-600 dark:hover:text-dark-300 transition-colors duration-150 ease-in docs-powered-by" target="_blank" href="https://retype.com/" rel="noopener">
+                            <span class="text-xs whitespace-nowrap">Powered by</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="ml-2" fill="currentColor" width="96" height="20" overflow="visible"><path d="M0 0v20h13.59V0H0zm11.15 17.54H2.44V2.46h8.71v15.08zM15.8 20h2.44V4.67L15.8 2.22zM20.45 6.89V20h2.44V9.34z"/><g><path d="M40.16 8.44c0 1.49-.59 2.45-1.75 2.88l2.34 3.32h-2.53l-2.04-2.96h-1.43v2.96h-2.06V5.36h3.5c1.43 0 2.46.24 3.07.73s.9 1.27.9 2.35zm-2.48 1.1c.26-.23.38-.59.38-1.09 0-.5-.13-.84-.4-1.03s-.73-.28-1.39-.28h-1.54v2.75h1.5c.72 0 1.2-.12 1.45-.35zM51.56 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92h4.74v1.83h-6.79V5.36h6.64zM60.09 7.15v7.48h-2.06V7.15h-2.61V5.36h7.28v1.79h-2.61zM70.81 14.64h-2.06v-3.66l-3.19-5.61h2.23l1.99 3.45 1.99-3.45H74l-3.19 5.61v3.66zM83.99 6.19c.65.55.97 1.4.97 2.55s-.33 1.98-1 2.51-1.68.8-3.04.8h-1.23v2.59h-2.06V5.36h3.26c1.42 0 2.45.28 3.1.83zm-1.51 3.65c.25-.28.37-.69.37-1.22s-.16-.92-.48-1.14c-.32-.23-.82-.34-1.5-.34H79.7v3.12h1.38c.68 0 1.15-.14 1.4-.42zM95.85 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92H96v1.83h-6.79V5.36h6.64z"/></g></svg>
+                        </a>
+                    </div>
+                </template>
+            </doc-sidebar>
+    
+            <div class="grow min-w-0 bg-body-bg">
+                <!-- Render "toolbar" template here on api pages --><!-- Render page content -->
+                <div class="flex">
+                    <div id="retype-main" class="min-w-0 p-4 grow md:px-16">
+                        <main class="relative pb-12 lg:pt-2">
+                            <div class="retype-markdown" id="retype-content">
+                                <!-- Rendered if sidebar right is enabled -->
+                                <div id="retype-sidebar-right-toggle"></div>
+                                <!-- Page content  -->
+<doc-anchor-target id="liste-des-items" class="break-words">
+    <h1>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#liste-des-items">#</doc-anchor-trigger>
+        <span>Liste des items</span>
+    </h1>
+</doc-anchor-target>
+<p>Commande pour donner un item : <code v-pre>giveitem &lt;id&gt; &lt;nom_item&gt; &lt;quantité&gt;</code></p>
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable">
+<thead>
+<tr>
+<th>Image</th>
+<th>Nom (clé)</th>
+<th>Label</th>
+<th>Type</th>
+<th>Rareté</th>
+<th>Commande</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img src="../images/eldoria/astrovian-0ag_ujsq.png" alt="Astrovian" /></td>
+<td><code v-pre>astrovian</code></td>
+<td>Astrovian</td>
+<td>item_simple</td>
+<td>common</td>
+<td><code v-pre>giveitem me astrovian 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/diamond-bevv5ir_.png" alt="Diamond" /></td>
+<td><code v-pre>diamond</code></td>
+<td>Diamond</td>
+<td>item_simple</td>
+<td>epic</td>
+<td><code v-pre>giveitem me diamond 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/capsule.png" alt="Capsule" /></td>
+<td><code v-pre>capsule</code></td>
+<td>Capsule</td>
+<td>item_simple</td>
+<td>common</td>
+<td><code v-pre>giveitem me capsule 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/apple.png" alt="Pomme" /></td>
+<td><code v-pre>apple</code></td>
+<td>Pomme</td>
+<td>item_simple</td>
+<td>common</td>
+<td><code v-pre>giveitem me apple 1</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atw1</code></td>
+<td>Masque</td>
+<td>item_equip_mask</td>
+<td>common</td>
+<td><code v-pre>giveitem me atw1 1</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atw111</code></td>
+<td>Masque 111</td>
+<td>item_equip_mask</td>
+<td>common</td>
+<td><code v-pre>giveitem me atw111 1</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atw2</code></td>
+<td>Pantalon</td>
+<td>item_equip_pant</td>
+<td>common</td>
+<td><code v-pre>giveitem me atw2 1</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atw3</code></td>
+<td>Accessoire</td>
+<td>item_equip_accessories</td>
+<td>common</td>
+<td><code v-pre>giveitem me atw3 1</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atw4</code></td>
+<td>Armure</td>
+<td>item_equip_armor</td>
+<td>common</td>
+<td><code v-pre>giveitem me atw4 1</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atw5</code></td>
+<td>Ceinture</td>
+<td>item_equip_belt</td>
+<td>common</td>
+<td><code v-pre>giveitem me atw5 1</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atw6</code></td>
+<td>Gants</td>
+<td>item_equip_glove</td>
+<td>common</td>
+<td><code v-pre>giveitem me atw6 1</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atw7</code></td>
+<td>Chapeau</td>
+<td>item_equip_head</td>
+<td>common</td>
+<td><code v-pre>giveitem me atw7 1</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atw8</code></td>
+<td>Bague</td>
+<td>item_equip_ring</td>
+<td>common</td>
+<td><code v-pre>giveitem me atw8 1</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atw9</code></td>
+<td>Chaussures</td>
+<td>item_equip_shoe</td>
+<td>common</td>
+<td><code v-pre>giveitem me atw9 1</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atw13</code></td>
+<td>Objet général</td>
+<td>item_simple</td>
+<td>common</td>
+<td><code v-pre>giveitem me atw13 1</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atw14</code></td>
+<td>Composant craft</td>
+<td>item_component</td>
+<td>common</td>
+<td><code v-pre>giveitem me atw14 1</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atw15</code></td>
+<td>Tenue fashion</td>
+<td>item_fashion</td>
+<td>common</td>
+<td><code v-pre>giveitem me atw15 1</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atw16</code></td>
+<td>Card LV2</td>
+<td>item_simple</td>
+<td>rare</td>
+<td><code v-pre>giveitem me atw16 1</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atw17</code></td>
+<td>Card LV3</td>
+<td>item_simple</td>
+<td>epic</td>
+<td><code v-pre>giveitem me atw17 1</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atw18</code></td>
+<td>Card LV4</td>
+<td>item_simple</td>
+<td>legendary</td>
+<td><code v-pre>giveitem me atw18 1</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atw19</code></td>
+<td>Card LV5</td>
+<td>item_simple</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me atw19 1</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atw21</code></td>
+<td>Astro Core</td>
+<td>item_simple</td>
+<td>common</td>
+<td><code v-pre>giveitem me atw21 1</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atw22</code></td>
+<td>Spinel</td>
+<td>item_simple</td>
+<td>common</td>
+<td><code v-pre>giveitem me atw22 1</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atw23</code></td>
+<td>Medulla</td>
+<td>item_simple</td>
+<td>common</td>
+<td><code v-pre>giveitem me atw23 1</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atw24</code></td>
+<td>Shade Drop</td>
+<td>item_simple</td>
+<td>common</td>
+<td><code v-pre>giveitem me atw24 1</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atw25</code></td>
+<td>Heart of Spinel</td>
+<td>item_simple</td>
+<td>common</td>
+<td><code v-pre>giveitem me atw25 1</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atw26</code></td>
+<td>Sunstone</td>
+<td>item_simple</td>
+<td>common</td>
+<td><code v-pre>giveitem me atw26 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atw46.png" alt="Fly Wing" /></td>
+<td><code v-pre>atw46</code></td>
+<td>Fly Wing</td>
+<td>item_simple</td>
+<td>common</td>
+<td><code v-pre>giveitem me atw46 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atw47.png" alt="Surgery Spell" /></td>
+<td><code v-pre>atw47</code></td>
+<td>Surgery Spell</td>
+<td>item_simple</td>
+<td>common</td>
+<td><code v-pre>giveitem me atw47 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atw48.png" alt="Random ID 5 Main" /></td>
+<td><code v-pre>atw48</code></td>
+<td>Random ID 5 Main</td>
+<td>item_simple</td>
+<td>common</td>
+<td><code v-pre>giveitem me atw48 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atw49.png" alt="Random ID 4 Main" /></td>
+<td><code v-pre>atw49</code></td>
+<td>Random ID 4 Main</td>
+<td>item_simple</td>
+<td>common</td>
+<td><code v-pre>giveitem me atw49 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atw50.png" alt="Random ID 3 Main" /></td>
+<td><code v-pre>atw50</code></td>
+<td>Random ID 3 Main</td>
+<td>item_simple</td>
+<td>common</td>
+<td><code v-pre>giveitem me atw50 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atw51.png" alt="Random ID 2 Main" /></td>
+<td><code v-pre>atw51</code></td>
+<td>Random ID 2 Main</td>
+<td>item_simple</td>
+<td>common</td>
+<td><code v-pre>giveitem me atw51 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atw52.png" alt="Random ID 1 Main" /></td>
+<td><code v-pre>atw52</code></td>
+<td>Random ID 1 Main</td>
+<td>item_simple</td>
+<td>common</td>
+<td><code v-pre>giveitem me atw52 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atw53.png" alt="AstroVerse Garment" /></td>
+<td><code v-pre>atw53</code></td>
+<td>AstroVerse Garment</td>
+<td>item_simple</td>
+<td>common</td>
+<td><code v-pre>giveitem me atw53 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atw54.png" alt="Dragon Breath X 1" /></td>
+<td><code v-pre>atw54</code></td>
+<td>Dragon Breath X 1</td>
+<td>item_simple</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me atw54 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atw55.png" alt="Dragon Breath X 2" /></td>
+<td><code v-pre>atw55</code></td>
+<td>Dragon Breath X 2</td>
+<td>item_simple</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me atw55 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atw56.png" alt="Dragon Breath X 3" /></td>
+<td><code v-pre>atw56</code></td>
+<td>Dragon Breath X 3</td>
+<td>item_simple</td>
+<td>epic</td>
+<td><code v-pre>giveitem me atw56 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atw57.png" alt="Dragon Breath V 1" /></td>
+<td><code v-pre>atw57</code></td>
+<td>Dragon Breath V 1</td>
+<td>item_simple</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me atw57 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atw58.png" alt="Dragon Breath V 2" /></td>
+<td><code v-pre>atw58</code></td>
+<td>Dragon Breath V 2</td>
+<td>item_simple</td>
+<td>legendary</td>
+<td><code v-pre>giveitem me atw58 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atw59.png" alt="Dragon Breath V 3" /></td>
+<td><code v-pre>atw59</code></td>
+<td>Dragon Breath V 3</td>
+<td>item_simple</td>
+<td>epic</td>
+<td><code v-pre>giveitem me atw59 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atw60.png" alt="Dragon Breath IV 1" /></td>
+<td><code v-pre>atw60</code></td>
+<td>Dragon Breath IV 1</td>
+<td>item_simple</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me atw60 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atw61.png" alt="Dragon Breath IV 2" /></td>
+<td><code v-pre>atw61</code></td>
+<td>Dragon Breath IV 2</td>
+<td>item_simple</td>
+<td>epic</td>
+<td><code v-pre>giveitem me atw61 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atw62.png" alt="Dragon Breath IV 3" /></td>
+<td><code v-pre>atw62</code></td>
+<td>Dragon Breath IV 3</td>
+<td>item_simple</td>
+<td>common</td>
+<td><code v-pre>giveitem me atw62 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atw63.png" alt="Dragon Breath III 1" /></td>
+<td><code v-pre>atw63</code></td>
+<td>Dragon Breath III 1</td>
+<td>item_simple</td>
+<td>legendary</td>
+<td><code v-pre>giveitem me atw63 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atw64.png" alt="Dragon Breath III 2" /></td>
+<td><code v-pre>atw64</code></td>
+<td>Dragon Breath III 2</td>
+<td>item_simple</td>
+<td>epic</td>
+<td><code v-pre>giveitem me atw64 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atw65.png" alt="Dragon Breath III 3" /></td>
+<td><code v-pre>atw65</code></td>
+<td>Dragon Breath III 3</td>
+<td>item_simple</td>
+<td>common</td>
+<td><code v-pre>giveitem me atw65 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atw67.png" alt="Heaven Key" /></td>
+<td><code v-pre>atw67</code></td>
+<td>Heaven Key</td>
+<td>item_simple</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me atw67 1</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwev1</code></td>
+<td>Star Dust</td>
+<td>item_simple</td>
+<td>legendary</td>
+<td><code v-pre>giveitem me atwev1 1</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwev3</code></td>
+<td>Star Bust</td>
+<td>item_simple</td>
+<td>common</td>
+<td><code v-pre>giveitem me atwev3 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwdr1.png" alt="Nebula Broken Stone" /></td>
+<td><code v-pre>atwdr1</code></td>
+<td>Nebula Broken Stone</td>
+<td>item_simple</td>
+<td>common</td>
+<td><code v-pre>giveitem me atwdr1 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwdr2.png" alt="Jelly As" /></td>
+<td><code v-pre>atwdr2</code></td>
+<td>Jelly As</td>
+<td>item_simple</td>
+<td>common</td>
+<td><code v-pre>giveitem me atwdr2 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwdr3.png" alt="Angel Blood" /></td>
+<td><code v-pre>atwdr3</code></td>
+<td>Angel Blood</td>
+<td>item_simple</td>
+<td>common</td>
+<td><code v-pre>giveitem me atwdr3 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwdr4.png" alt="Arsenic" /></td>
+<td><code v-pre>atwdr4</code></td>
+<td>Arsenic</td>
+<td>item_simple</td>
+<td>common</td>
+<td><code v-pre>giveitem me atwdr4 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwdr5.png" alt="Azurite" /></td>
+<td><code v-pre>atwdr5</code></td>
+<td>Azurite</td>
+<td>item_simple</td>
+<td>common</td>
+<td><code v-pre>giveitem me atwdr5 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwdr6.png" alt="Beryl" /></td>
+<td><code v-pre>atwdr6</code></td>
+<td>Beryl</td>
+<td>item_simple</td>
+<td>common</td>
+<td><code v-pre>giveitem me atwdr6 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwdr7.png" alt="Black Blood" /></td>
+<td><code v-pre>atwdr7</code></td>
+<td>Black Blood</td>
+<td>item_simple</td>
+<td>common</td>
+<td><code v-pre>giveitem me atwdr7 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwdr8.png" alt="Calomel" /></td>
+<td><code v-pre>atwdr8</code></td>
+<td>Calomel</td>
+<td>item_simple</td>
+<td>common</td>
+<td><code v-pre>giveitem me atwdr8 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwdr9.png" alt="Curse Book" /></td>
+<td><code v-pre>atwdr9</code></td>
+<td>Curse Book</td>
+<td>item_simple</td>
+<td>common</td>
+<td><code v-pre>giveitem me atwdr9 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwdr10.png" alt="Demon Blood" /></td>
+<td><code v-pre>atwdr10</code></td>
+<td>Demon Blood</td>
+<td>item_simple</td>
+<td>common</td>
+<td><code v-pre>giveitem me atwdr10 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwdr11.png" alt="Demon Wings" /></td>
+<td><code v-pre>atwdr11</code></td>
+<td>Demon Wings</td>
+<td>item_simple</td>
+<td>common</td>
+<td><code v-pre>giveitem me atwdr11 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwdr12.png" alt="Demon's Heart" /></td>
+<td><code v-pre>atwdr12</code></td>
+<td>Demon&#x27;s Heart</td>
+<td>item_simple</td>
+<td>common</td>
+<td><code v-pre>giveitem me atwdr12 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwdr13.png" alt="Devilline" /></td>
+<td><code v-pre>atwdr13</code></td>
+<td>Devilline</td>
+<td>item_simple</td>
+<td>common</td>
+<td><code v-pre>giveitem me atwdr13 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwdr14.png" alt="Devil's Eyes" /></td>
+<td><code v-pre>atwdr14</code></td>
+<td>Devil&#x27;s Eyes</td>
+<td>item_simple</td>
+<td>common</td>
+<td><code v-pre>giveitem me atwdr14 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwdr15.png" alt="Fallen Angel" /></td>
+<td><code v-pre>atwdr15</code></td>
+<td>Fallen Angel</td>
+<td>item_simple</td>
+<td>common</td>
+<td><code v-pre>giveitem me atwdr15 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwdr16.png" alt="Fire Ball" /></td>
+<td><code v-pre>atwdr16</code></td>
+<td>Fire Ball</td>
+<td>item_simple</td>
+<td>common</td>
+<td><code v-pre>giveitem me atwdr16 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwdr17.png" alt="Haggish Skin" /></td>
+<td><code v-pre>atwdr17</code></td>
+<td>Haggish Skin</td>
+<td>item_simple</td>
+<td>common</td>
+<td><code v-pre>giveitem me atwdr17 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwdr18.png" alt="Leer" /></td>
+<td><code v-pre>atwdr18</code></td>
+<td>Leer</td>
+<td>item_simple</td>
+<td>common</td>
+<td><code v-pre>giveitem me atwdr18 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwdr19.png" alt="Shard of Iryar" /></td>
+<td><code v-pre>atwdr19</code></td>
+<td>Shard of Iryar</td>
+<td>item_simple</td>
+<td>common</td>
+<td><code v-pre>giveitem me atwdr19 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwdr20.png" alt="Slobber" /></td>
+<td><code v-pre>atwdr20</code></td>
+<td>Slobber</td>
+<td>item_simple</td>
+<td>common</td>
+<td><code v-pre>giveitem me atwdr20 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwdr21.png" alt="Voodoo" /></td>
+<td><code v-pre>atwdr21</code></td>
+<td>Voodoo</td>
+<td>item_simple</td>
+<td>common</td>
+<td><code v-pre>giveitem me atwdr21 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwin01.png" alt="empty sweet bottle" /></td>
+<td><code v-pre>atwin01</code></td>
+<td>empty sweet bottle</td>
+<td>item_simple</td>
+<td>common</td>
+<td><code v-pre>giveitem me atwin01 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwin02.png" alt="empty spicy bottle" /></td>
+<td><code v-pre>atwin02</code></td>
+<td>empty spicy bottle</td>
+<td>item_simple</td>
+<td>common</td>
+<td><code v-pre>giveitem me atwin02 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwin03.png" alt="empty bitter bottle" /></td>
+<td><code v-pre>atwin03</code></td>
+<td>empty bitter bottle</td>
+<td>item_simple</td>
+<td>common</td>
+<td><code v-pre>giveitem me atwin03 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwin04.png" alt="empty salty bottle" /></td>
+<td><code v-pre>atwin04</code></td>
+<td>empty salty bottle</td>
+<td>item_simple</td>
+<td>common</td>
+<td><code v-pre>giveitem me atwin04 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwin05.png" alt="empty sour bottle" /></td>
+<td><code v-pre>atwin05</code></td>
+<td>empty sour bottle</td>
+<td>item_simple</td>
+<td>common</td>
+<td><code v-pre>giveitem me atwin05 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwhp1.png" alt="Yummy Potion" /></td>
+<td><code v-pre>atwhp1</code></td>
+<td>Yummy Potion</td>
+<td>item_simple</td>
+<td>common</td>
+<td><code v-pre>giveitem me atwhp1 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwhp2.png" alt="Bitter Potion" /></td>
+<td><code v-pre>atwhp2</code></td>
+<td>Bitter Potion</td>
+<td>item_simple</td>
+<td>common</td>
+<td><code v-pre>giveitem me atwhp2 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwhp3.png" alt="Spicy Potion" /></td>
+<td><code v-pre>atwhp3</code></td>
+<td>Spicy Potion</td>
+<td>item_simple</td>
+<td>common</td>
+<td><code v-pre>giveitem me atwhp3 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwhp4.png" alt="Sweet Potion" /></td>
+<td><code v-pre>atwhp4</code></td>
+<td>Sweet Potion</td>
+<td>item_simple</td>
+<td>common</td>
+<td><code v-pre>giveitem me atwhp4 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwmp1.png" alt="ZabZeed Potion" /></td>
+<td><code v-pre>atwmp1</code></td>
+<td>ZabZeed Potion</td>
+<td>item_simple</td>
+<td>common</td>
+<td><code v-pre>giveitem me atwmp1 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwmp2.png" alt="Sour Potion" /></td>
+<td><code v-pre>atwmp2</code></td>
+<td>Sour Potion</td>
+<td>item_simple</td>
+<td>common</td>
+<td><code v-pre>giveitem me atwmp2 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwmp3.png" alt="Salty Potion" /></td>
+<td><code v-pre>atwmp3</code></td>
+<td>Salty Potion</td>
+<td>item_simple</td>
+<td>common</td>
+<td><code v-pre>giveitem me atwmp3 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwhm1.png" alt="Holy Extra Potion" /></td>
+<td><code v-pre>atwhm1</code></td>
+<td>Holy Extra Potion</td>
+<td>item_simple</td>
+<td>common</td>
+<td><code v-pre>giveitem me atwhm1 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwhm2.png" alt="Holy Potion" /></td>
+<td><code v-pre>atwhm2</code></td>
+<td>Holy Potion</td>
+<td>item_simple</td>
+<td>common</td>
+<td><code v-pre>giveitem me atwhm2 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwpp3.png" alt="Pinky Pop XXL" /></td>
+<td><code v-pre>atwpp3</code></td>
+<td>Pinky Pop XXL</td>
+<td>item_simple</td>
+<td>rare</td>
+<td><code v-pre>giveitem me atwpp3 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwpp4.png" alt="Pinky Pop XL" /></td>
+<td><code v-pre>atwpp4</code></td>
+<td>Pinky Pop XL</td>
+<td>item_simple</td>
+<td>rare</td>
+<td><code v-pre>giveitem me atwpp4 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwpp5.png" alt="Pinky Pop L" /></td>
+<td><code v-pre>atwpp5</code></td>
+<td>Pinky Pop L</td>
+<td>item_simple</td>
+<td>rare</td>
+<td><code v-pre>giveitem me atwpp5 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwpp6.png" alt="Pinky Pop M" /></td>
+<td><code v-pre>atwpp6</code></td>
+<td>Pinky Pop M</td>
+<td>item_simple</td>
+<td>rare</td>
+<td><code v-pre>giveitem me atwpp6 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwpp7.png" alt="Pinky Pop S" /></td>
+<td><code v-pre>atwpp7</code></td>
+<td>Pinky Pop S</td>
+<td>item_simple</td>
+<td>rare</td>
+<td><code v-pre>giveitem me atwpp7 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwpp8.png" alt="White Sprinkle XXL" /></td>
+<td><code v-pre>atwpp8</code></td>
+<td>White Sprinkle XXL</td>
+<td>item_simple</td>
+<td>epic</td>
+<td><code v-pre>giveitem me atwpp8 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwpp9.png" alt="White Sprinkle XL" /></td>
+<td><code v-pre>atwpp9</code></td>
+<td>White Sprinkle XL</td>
+<td>item_simple</td>
+<td>epic</td>
+<td><code v-pre>giveitem me atwpp9 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwpp10.png" alt="White Sprinkle L" /></td>
+<td><code v-pre>atwpp10</code></td>
+<td>White Sprinkle L</td>
+<td>item_simple</td>
+<td>epic</td>
+<td><code v-pre>giveitem me atwpp10 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwpp11.png" alt="White Sprinkle M" /></td>
+<td><code v-pre>atwpp11</code></td>
+<td>White Sprinkle M</td>
+<td>item_simple</td>
+<td>epic</td>
+<td><code v-pre>giveitem me atwpp11 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwpp12.png" alt="White Sprinkle S" /></td>
+<td><code v-pre>atwpp12</code></td>
+<td>White Sprinkle S</td>
+<td>item_simple</td>
+<td>epic</td>
+<td><code v-pre>giveitem me atwpp12 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwpp13.png" alt="Dark Choco XXL" /></td>
+<td><code v-pre>atwpp13</code></td>
+<td>Dark Choco XXL</td>
+<td>item_simple</td>
+<td>legendary</td>
+<td><code v-pre>giveitem me atwpp13 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwpp14.png" alt="Dark Choco XL" /></td>
+<td><code v-pre>atwpp14</code></td>
+<td>Dark Choco XL</td>
+<td>item_simple</td>
+<td>legendary</td>
+<td><code v-pre>giveitem me atwpp14 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwpp15.png" alt="Dark Choco L" /></td>
+<td><code v-pre>atwpp15</code></td>
+<td>Dark Choco L</td>
+<td>item_simple</td>
+<td>legendary</td>
+<td><code v-pre>giveitem me atwpp15 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwpp16.png" alt="Dark Choco M" /></td>
+<td><code v-pre>atwpp16</code></td>
+<td>Dark Choco M</td>
+<td>item_simple</td>
+<td>legendary</td>
+<td><code v-pre>giveitem me atwpp16 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwpp17.png" alt="Dark Choco S" /></td>
+<td><code v-pre>atwpp17</code></td>
+<td>Dark Choco S</td>
+<td>item_simple</td>
+<td>legendary</td>
+<td><code v-pre>giveitem me atwpp17 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwpp18.png" alt="Chocoberries Cake XXL" /></td>
+<td><code v-pre>atwpp18</code></td>
+<td>Chocoberries Cake XXL</td>
+<td>item_simple</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me atwpp18 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwpp19.png" alt="Chocoberries Cake XL" /></td>
+<td><code v-pre>atwpp19</code></td>
+<td>Chocoberries Cake XL</td>
+<td>item_simple</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me atwpp19 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwpp20.png" alt="Chocoberries Cake L" /></td>
+<td><code v-pre>atwpp20</code></td>
+<td>Chocoberries Cake L</td>
+<td>item_simple</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me atwpp20 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwpp21.png" alt="Chocoberries Cake M" /></td>
+<td><code v-pre>atwpp21</code></td>
+<td>Chocoberries Cake M</td>
+<td>item_simple</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me atwpp21 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwpp22.png" alt="Chocoberries Cake S" /></td>
+<td><code v-pre>atwpp22</code></td>
+<td>Chocoberries Cake S</td>
+<td>item_simple</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me atwpp22 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwpp23.png" alt="Peanuts 3XL" /></td>
+<td><code v-pre>atwpp23</code></td>
+<td>Peanuts 3XL</td>
+<td>item_simple</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me atwpp23 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwpp24.png" alt="Peanuts 2XL" /></td>
+<td><code v-pre>atwpp24</code></td>
+<td>Peanuts 2XL</td>
+<td>item_simple</td>
+<td>legendary</td>
+<td><code v-pre>giveitem me atwpp24 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwpp25.png" alt="Peanuts XXL" /></td>
+<td><code v-pre>atwpp25</code></td>
+<td>Peanuts XXL</td>
+<td>item_simple</td>
+<td>epic</td>
+<td><code v-pre>giveitem me atwpp25 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwpp26.png" alt="Peanuts XL" /></td>
+<td><code v-pre>atwpp26</code></td>
+<td>Peanuts XL</td>
+<td>item_simple</td>
+<td>common</td>
+<td><code v-pre>giveitem me atwpp26 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwpp27.png" alt="Peanuts L" /></td>
+<td><code v-pre>atwpp27</code></td>
+<td>Peanuts L</td>
+<td>item_simple</td>
+<td>common</td>
+<td><code v-pre>giveitem me atwpp27 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwpp28.png" alt="Peanuts M" /></td>
+<td><code v-pre>atwpp28</code></td>
+<td>Peanuts M</td>
+<td>item_simple</td>
+<td>common</td>
+<td><code v-pre>giveitem me atwpp28 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwpp29.png" alt="Peanuts S" /></td>
+<td><code v-pre>atwpp29</code></td>
+<td>Peanuts S</td>
+<td>item_simple</td>
+<td>common</td>
+<td><code v-pre>giveitem me atwpp29 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwpp30.png" alt="Chestnut 3XL" /></td>
+<td><code v-pre>atwpp30</code></td>
+<td>Chestnut 3XL</td>
+<td>item_simple</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me atwpp30 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwpp31.png" alt="Chestnut 2XL" /></td>
+<td><code v-pre>atwpp31</code></td>
+<td>Chestnut 2XL</td>
+<td>item_simple</td>
+<td>legendary</td>
+<td><code v-pre>giveitem me atwpp31 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwpp32.png" alt="Chestnut XXL" /></td>
+<td><code v-pre>atwpp32</code></td>
+<td>Chestnut XXL</td>
+<td>item_simple</td>
+<td>epic</td>
+<td><code v-pre>giveitem me atwpp32 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwpp33.png" alt="Chestnut XL" /></td>
+<td><code v-pre>atwpp33</code></td>
+<td>Chestnut XL</td>
+<td>item_simple</td>
+<td>rare</td>
+<td><code v-pre>giveitem me atwpp33 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwpp34.png" alt="Chestnut L" /></td>
+<td><code v-pre>atwpp34</code></td>
+<td>Chestnut L</td>
+<td>item_simple</td>
+<td>rare</td>
+<td><code v-pre>giveitem me atwpp34 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwpp35.png" alt="Chestnut M" /></td>
+<td><code v-pre>atwpp35</code></td>
+<td>Chestnut M</td>
+<td>item_simple</td>
+<td>rare</td>
+<td><code v-pre>giveitem me atwpp35 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwpp36.png" alt="Chestnut S" /></td>
+<td><code v-pre>atwpp36</code></td>
+<td>Chestnut S</td>
+<td>item_simple</td>
+<td>rare</td>
+<td><code v-pre>giveitem me atwpp36 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwpp37.png" alt="Walnut 3XL" /></td>
+<td><code v-pre>atwpp37</code></td>
+<td>Walnut 3XL</td>
+<td>item_simple</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me atwpp37 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwpp38.png" alt="Walnut 2XL" /></td>
+<td><code v-pre>atwpp38</code></td>
+<td>Walnut 2XL</td>
+<td>item_simple</td>
+<td>legendary</td>
+<td><code v-pre>giveitem me atwpp38 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwpp39.png" alt="Walnut XXL" /></td>
+<td><code v-pre>atwpp39</code></td>
+<td>Walnut XXL</td>
+<td>item_simple</td>
+<td>legendary</td>
+<td><code v-pre>giveitem me atwpp39 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwpp40.png" alt="Walnut XL" /></td>
+<td><code v-pre>atwpp40</code></td>
+<td>Walnut XL</td>
+<td>item_simple</td>
+<td>epic</td>
+<td><code v-pre>giveitem me atwpp40 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwpp41.png" alt="Walnut L" /></td>
+<td><code v-pre>atwpp41</code></td>
+<td>Walnut L</td>
+<td>item_simple</td>
+<td>epic</td>
+<td><code v-pre>giveitem me atwpp41 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwpp42.png" alt="Walnut M" /></td>
+<td><code v-pre>atwpp42</code></td>
+<td>Walnut M</td>
+<td>item_simple</td>
+<td>common</td>
+<td><code v-pre>giveitem me atwpp42 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwpp43.png" alt="Walnut S" /></td>
+<td><code v-pre>atwpp43</code></td>
+<td>Walnut S</td>
+<td>item_simple</td>
+<td>common</td>
+<td><code v-pre>giveitem me atwpp43 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwpp44.png" alt="Premium Pistachios 3XL" /></td>
+<td><code v-pre>atwpp44</code></td>
+<td>Premium Pistachios 3XL</td>
+<td>item_simple</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me atwpp44 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwpp45.png" alt="Premium Pistachios 2XL" /></td>
+<td><code v-pre>atwpp45</code></td>
+<td>Premium Pistachios 2XL</td>
+<td>item_simple</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me atwpp45 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwpp46.png" alt="Premium Pistachios XXL" /></td>
+<td><code v-pre>atwpp46</code></td>
+<td>Premium Pistachios XXL</td>
+<td>item_simple</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me atwpp46 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwpp47.png" alt="Premium Pistachios XL" /></td>
+<td><code v-pre>atwpp47</code></td>
+<td>Premium Pistachios XL</td>
+<td>item_simple</td>
+<td>legendary</td>
+<td><code v-pre>giveitem me atwpp47 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwpp48.png" alt="Premium Pistachios L" /></td>
+<td><code v-pre>atwpp48</code></td>
+<td>Premium Pistachios L</td>
+<td>item_simple</td>
+<td>legendary</td>
+<td><code v-pre>giveitem me atwpp48 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwpp49.png" alt="Premium Pistachios M" /></td>
+<td><code v-pre>atwpp49</code></td>
+<td>Premium Pistachios M</td>
+<td>item_simple</td>
+<td>epic</td>
+<td><code v-pre>giveitem me atwpp49 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwpp50.png" alt="Premium Pistachios S" /></td>
+<td><code v-pre>atwpp50</code></td>
+<td>Premium Pistachios S</td>
+<td>item_simple</td>
+<td>common</td>
+<td><code v-pre>giveitem me atwpp50 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwpp51.png" alt="Fancy Pistachios 3XL" /></td>
+<td><code v-pre>atwpp51</code></td>
+<td>Fancy Pistachios 3XL</td>
+<td>item_simple</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me atwpp51 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwpp52.png" alt="Fancy Pistachios 2XL" /></td>
+<td><code v-pre>atwpp52</code></td>
+<td>Fancy Pistachios 2XL</td>
+<td>item_simple</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me atwpp52 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwpp53.png" alt="Fancy Pistachios XXL" /></td>
+<td><code v-pre>atwpp53</code></td>
+<td>Fancy Pistachios XXL</td>
+<td>item_simple</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me atwpp53 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwpp54.png" alt="Fancy Pistachios XL" /></td>
+<td><code v-pre>atwpp54</code></td>
+<td>Fancy Pistachios XL</td>
+<td>item_simple</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me atwpp54 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwpp55.png" alt="Fancy Pistachios L" /></td>
+<td><code v-pre>atwpp55</code></td>
+<td>Fancy Pistachios L</td>
+<td>item_simple</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me atwpp55 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwpp56.png" alt="Fancy Pistachios M" /></td>
+<td><code v-pre>atwpp56</code></td>
+<td>Fancy Pistachios M</td>
+<td>item_simple</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me atwpp56 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwpp57.png" alt="Fancy Pistachios S" /></td>
+<td><code v-pre>atwpp57</code></td>
+<td>Fancy Pistachios S</td>
+<td>item_simple</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me atwpp57 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwpp58.png" alt="Bread XXL" /></td>
+<td><code v-pre>atwpp58</code></td>
+<td>Bread XXL</td>
+<td>item_simple</td>
+<td>rare</td>
+<td><code v-pre>giveitem me atwpp58 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwpp59.png" alt="Bread XL" /></td>
+<td><code v-pre>atwpp59</code></td>
+<td>Bread XL</td>
+<td>item_simple</td>
+<td>rare</td>
+<td><code v-pre>giveitem me atwpp59 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwpp60.png" alt="Bread L" /></td>
+<td><code v-pre>atwpp60</code></td>
+<td>Bread L</td>
+<td>item_simple</td>
+<td>rare</td>
+<td><code v-pre>giveitem me atwpp60 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwpp61.png" alt="Bread M" /></td>
+<td><code v-pre>atwpp61</code></td>
+<td>Bread M</td>
+<td>item_simple</td>
+<td>rare</td>
+<td><code v-pre>giveitem me atwpp61 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwpp62.png" alt="Bread S" /></td>
+<td><code v-pre>atwpp62</code></td>
+<td>Bread S</td>
+<td>item_simple</td>
+<td>rare</td>
+<td><code v-pre>giveitem me atwpp62 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwpp63.png" alt="Meat Taco XXL" /></td>
+<td><code v-pre>atwpp63</code></td>
+<td>Meat Taco XXL</td>
+<td>item_simple</td>
+<td>epic</td>
+<td><code v-pre>giveitem me atwpp63 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwpp64.png" alt="Meat Taco XL" /></td>
+<td><code v-pre>atwpp64</code></td>
+<td>Meat Taco XL</td>
+<td>item_simple</td>
+<td>epic</td>
+<td><code v-pre>giveitem me atwpp64 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwpp65.png" alt="Meat Taco L" /></td>
+<td><code v-pre>atwpp65</code></td>
+<td>Meat Taco L</td>
+<td>item_simple</td>
+<td>epic</td>
+<td><code v-pre>giveitem me atwpp65 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwpp66.png" alt="Meat Taco M" /></td>
+<td><code v-pre>atwpp66</code></td>
+<td>Meat Taco M</td>
+<td>item_simple</td>
+<td>epic</td>
+<td><code v-pre>giveitem me atwpp66 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwpp67.png" alt="Meat Taco S" /></td>
+<td><code v-pre>atwpp67</code></td>
+<td>Meat Taco S</td>
+<td>item_simple</td>
+<td>epic</td>
+<td><code v-pre>giveitem me atwpp67 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwpp68.png" alt="Mixed Salad XXL" /></td>
+<td><code v-pre>atwpp68</code></td>
+<td>Mixed Salad XXL</td>
+<td>item_simple</td>
+<td>legendary</td>
+<td><code v-pre>giveitem me atwpp68 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwpp69.png" alt="Mixed Salad XL" /></td>
+<td><code v-pre>atwpp69</code></td>
+<td>Mixed Salad XL</td>
+<td>item_simple</td>
+<td>legendary</td>
+<td><code v-pre>giveitem me atwpp69 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwpp70.png" alt="Mixed Salad L" /></td>
+<td><code v-pre>atwpp70</code></td>
+<td>Mixed Salad L</td>
+<td>item_simple</td>
+<td>legendary</td>
+<td><code v-pre>giveitem me atwpp70 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwpp71.png" alt="Mixed Salad M" /></td>
+<td><code v-pre>atwpp71</code></td>
+<td>Mixed Salad M</td>
+<td>item_simple</td>
+<td>legendary</td>
+<td><code v-pre>giveitem me atwpp71 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwpp72.png" alt="Mixed Salad S" /></td>
+<td><code v-pre>atwpp72</code></td>
+<td>Mixed Salad S</td>
+<td>item_simple</td>
+<td>legendary</td>
+<td><code v-pre>giveitem me atwpp72 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwpp73.png" alt="Pumpkin Soup XXL" /></td>
+<td><code v-pre>atwpp73</code></td>
+<td>Pumpkin Soup XXL</td>
+<td>item_simple</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me atwpp73 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwpp74.png" alt="Pumpkin Soup XL" /></td>
+<td><code v-pre>atwpp74</code></td>
+<td>Pumpkin Soup XL</td>
+<td>item_simple</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me atwpp74 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwpp75.png" alt="Pumpkin Soup L" /></td>
+<td><code v-pre>atwpp75</code></td>
+<td>Pumpkin Soup L</td>
+<td>item_simple</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me atwpp75 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwpp76.png" alt="Pumpkin Soup M" /></td>
+<td><code v-pre>atwpp76</code></td>
+<td>Pumpkin Soup M</td>
+<td>item_simple</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me atwpp76 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwpp77.png" alt="Pumpkin Soup S" /></td>
+<td><code v-pre>atwpp77</code></td>
+<td>Pumpkin Soup S</td>
+<td>item_simple</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me atwpp77 1</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwpul1</code></td>
+<td>Full Fashion</td>
+<td>item_simple</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me atwpul1 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwjob1.png" alt="Sticks" /></td>
+<td><code v-pre>atwjob1</code></td>
+<td>Sticks</td>
+<td>item_simple</td>
+<td>common</td>
+<td><code v-pre>giveitem me atwjob1 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwjob2.png" alt="Dry Leef" /></td>
+<td><code v-pre>atwjob2</code></td>
+<td>Dry Leef</td>
+<td>item_simple</td>
+<td>common</td>
+<td><code v-pre>giveitem me atwjob2 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwjob3.png" alt="Woods" /></td>
+<td><code v-pre>atwjob3</code></td>
+<td>Woods</td>
+<td>item_simple</td>
+<td>common</td>
+<td><code v-pre>giveitem me atwjob3 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwjob4.png" alt="Purple Mushroom" /></td>
+<td><code v-pre>atwjob4</code></td>
+<td>Purple Mushroom</td>
+<td>item_simple</td>
+<td>common</td>
+<td><code v-pre>giveitem me atwjob4 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwjob5.png" alt="Red Mushroom" /></td>
+<td><code v-pre>atwjob5</code></td>
+<td>Red Mushroom</td>
+<td>item_simple</td>
+<td>common</td>
+<td><code v-pre>giveitem me atwjob5 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwjob6.png" alt="Green Mushroom" /></td>
+<td><code v-pre>atwjob6</code></td>
+<td>Green Mushroom</td>
+<td>item_simple</td>
+<td>common</td>
+<td><code v-pre>giveitem me atwjob6 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwjob7.png" alt="Pumpkin" /></td>
+<td><code v-pre>atwjob7</code></td>
+<td>Pumpkin</td>
+<td>item_simple</td>
+<td>common</td>
+<td><code v-pre>giveitem me atwjob7 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwjob8.png" alt="Pumpkin Seeds" /></td>
+<td><code v-pre>atwjob8</code></td>
+<td>Pumpkin Seeds</td>
+<td>item_simple</td>
+<td>common</td>
+<td><code v-pre>giveitem me atwjob8 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwjob9.png" alt="Dry Pumpkin" /></td>
+<td><code v-pre>atwjob9</code></td>
+<td>Dry Pumpkin</td>
+<td>item_simple</td>
+<td>common</td>
+<td><code v-pre>giveitem me atwjob9 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwjob10.png" alt="Dodo Eggs" /></td>
+<td><code v-pre>atwjob10</code></td>
+<td>Dodo Eggs</td>
+<td>item_simple</td>
+<td>common</td>
+<td><code v-pre>giveitem me atwjob10 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwjob11.png" alt="Dodo Egg Pack" /></td>
+<td><code v-pre>atwjob11</code></td>
+<td>Dodo Egg Pack</td>
+<td>item_simple</td>
+<td>common</td>
+<td><code v-pre>giveitem me atwjob11 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwjob12.png" alt="Minnow" /></td>
+<td><code v-pre>atwjob12</code></td>
+<td>Minnow</td>
+<td>item_simple</td>
+<td>common</td>
+<td><code v-pre>giveitem me atwjob12 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwjob13.png" alt="Saba Fish" /></td>
+<td><code v-pre>atwjob13</code></td>
+<td>Saba Fish</td>
+<td>item_simple</td>
+<td>common</td>
+<td><code v-pre>giveitem me atwjob13 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwjob14.png" alt="Salmon" /></td>
+<td><code v-pre>atwjob14</code></td>
+<td>Salmon</td>
+<td>item_simple</td>
+<td>common</td>
+<td><code v-pre>giveitem me atwjob14 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwjob15.png" alt="Rainbow Fish" /></td>
+<td><code v-pre>atwjob15</code></td>
+<td>Rainbow Fish</td>
+<td>item_simple</td>
+<td>common</td>
+<td><code v-pre>giveitem me atwjob15 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwjob16.png" alt="Orange Fruit" /></td>
+<td><code v-pre>atwjob16</code></td>
+<td>Orange Fruit</td>
+<td>item_simple</td>
+<td>common</td>
+<td><code v-pre>giveitem me atwjob16 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwjob17.png" alt="Orange Basket" /></td>
+<td><code v-pre>atwjob17</code></td>
+<td>Orange Basket</td>
+<td>item_simple</td>
+<td>common</td>
+<td><code v-pre>giveitem me atwjob17 1</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwjob</code></td>
+<td>atwjob</td>
+<td>item_simple</td>
+<td>common</td>
+<td><code v-pre>giveitem me atwjob 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwjob19.png" alt="Pumpkin Juice" /></td>
+<td><code v-pre>atwjob19</code></td>
+<td>Pumpkin Juice</td>
+<td>item_simple</td>
+<td>common</td>
+<td><code v-pre>giveitem me atwjob19 1</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwjob20</code></td>
+<td>Mushroom Soup</td>
+<td>item_simple</td>
+<td>common</td>
+<td><code v-pre>giveitem me atwjob20 1</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwjob21</code></td>
+<td>Pumpkin Pie</td>
+<td>item_simple</td>
+<td>common</td>
+<td><code v-pre>giveitem me atwjob21 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwjob22.png" alt="Wooden Planks" /></td>
+<td><code v-pre>atwjob22</code></td>
+<td>Wooden Planks</td>
+<td>item_simple</td>
+<td>common</td>
+<td><code v-pre>giveitem me atwjob22 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwwork01.png" alt="Axe" /></td>
+<td><code v-pre>atwwork01</code></td>
+<td>Axe</td>
+<td>item_simple</td>
+<td>common</td>
+<td><code v-pre>giveitem me atwwork01 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwwork02.png" alt="Orange Basket" /></td>
+<td><code v-pre>atwwork02</code></td>
+<td>Orange Basket</td>
+<td>item_simple</td>
+<td>common</td>
+<td><code v-pre>giveitem me atwwork02 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwwork03.png" alt="fishing rod" /></td>
+<td><code v-pre>atwwork03</code></td>
+<td>fishing rod</td>
+<td>item_simple</td>
+<td>common</td>
+<td><code v-pre>giveitem me atwwork03 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/afwqq1.png" alt="Stick" /></td>
+<td><code v-pre>afwqq1</code></td>
+<td>Stick</td>
+<td>item_simple</td>
+<td>common</td>
+<td><code v-pre>giveitem me afwqq1 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/afwqq2.png" alt="Flippuf" /></td>
+<td><code v-pre>afwqq2</code></td>
+<td>Flippuf</td>
+<td>item_simple</td>
+<td>common</td>
+<td><code v-pre>giveitem me afwqq2 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/afwqq3.png" alt="Bloomglamer" /></td>
+<td><code v-pre>afwqq3</code></td>
+<td>Bloomglamer</td>
+<td>item_simple</td>
+<td>common</td>
+<td><code v-pre>giveitem me afwqq3 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/afwqq4.png" alt="Shanksharm Leaf" /></td>
+<td><code v-pre>afwqq4</code></td>
+<td>Shanksharm Leaf</td>
+<td>item_simple</td>
+<td>common</td>
+<td><code v-pre>giveitem me afwqq4 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/afwqq5.png" alt="Rosese" /></td>
+<td><code v-pre>afwqq5</code></td>
+<td>Rosese</td>
+<td>item_simple</td>
+<td>common</td>
+<td><code v-pre>giveitem me afwqq5 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/afwqq6.png" alt="Rosese" /></td>
+<td><code v-pre>afwqq6</code></td>
+<td>Rosese</td>
+<td>item_simple</td>
+<td>common</td>
+<td><code v-pre>giveitem me afwqq6 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/afwqq7.png" alt="Beer" /></td>
+<td><code v-pre>afwqq7</code></td>
+<td>Beer</td>
+<td>item_simple</td>
+<td>common</td>
+<td><code v-pre>giveitem me afwqq7 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/afwqq8.png" alt="Wooden Pack" /></td>
+<td><code v-pre>afwqq8</code></td>
+<td>Wooden Pack</td>
+<td>item_simple</td>
+<td>common</td>
+<td><code v-pre>giveitem me afwqq8 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/afwqq9.png" alt="Mail From Anath" /></td>
+<td><code v-pre>afwqq9</code></td>
+<td>Mail From Anath</td>
+<td>item_simple</td>
+<td>common</td>
+<td><code v-pre>giveitem me afwqq9 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/afwqq10.png" alt="Bloomglamer Pack" /></td>
+<td><code v-pre>afwqq10</code></td>
+<td>Bloomglamer Pack</td>
+<td>item_simple</td>
+<td>common</td>
+<td><code v-pre>giveitem me afwqq10 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/afwqq11.png" alt="Medicine Bag" /></td>
+<td><code v-pre>afwqq11</code></td>
+<td>Medicine Bag</td>
+<td>item_simple</td>
+<td>common</td>
+<td><code v-pre>giveitem me afwqq11 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/afwqq12.png" alt="Mail From Hesk" /></td>
+<td><code v-pre>afwqq12</code></td>
+<td>Mail From Hesk</td>
+<td>item_simple</td>
+<td>common</td>
+<td><code v-pre>giveitem me afwqq12 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/afwqq13.png" alt="Horse Food" /></td>
+<td><code v-pre>afwqq13</code></td>
+<td>Horse Food</td>
+<td>item_simple</td>
+<td>common</td>
+<td><code v-pre>giveitem me afwqq13 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/afwqq14.png" alt="Medicine For Skin Diseases" /></td>
+<td><code v-pre>afwqq14</code></td>
+<td>Medicine For Skin Diseases</td>
+<td>item_simple</td>
+<td>common</td>
+<td><code v-pre>giveitem me afwqq14 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/afwqq15.png" alt="Mail From Deck" /></td>
+<td><code v-pre>afwqq15</code></td>
+<td>Mail From Deck</td>
+<td>item_simple</td>
+<td>common</td>
+<td><code v-pre>giveitem me afwqq15 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/afwqq16.png" alt="Mail From Vivian" /></td>
+<td><code v-pre>afwqq16</code></td>
+<td>Mail From Vivian</td>
+<td>item_simple</td>
+<td>common</td>
+<td><code v-pre>giveitem me afwqq16 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/afwqq17.png" alt="Key STRY" /></td>
+<td><code v-pre>afwqq17</code></td>
+<td>Key STRY</td>
+<td>item_simple</td>
+<td>common</td>
+<td><code v-pre>giveitem me afwqq17 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwgem1.png" alt="Coals" /></td>
+<td><code v-pre>atwgem1</code></td>
+<td>Coals</td>
+<td>item_simple</td>
+<td>common</td>
+<td><code v-pre>giveitem me atwgem1 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwgem2.png" alt="Sand Stone" /></td>
+<td><code v-pre>atwgem2</code></td>
+<td>Sand Stone</td>
+<td>item_simple</td>
+<td>common</td>
+<td><code v-pre>giveitem me atwgem2 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwgem3.png" alt="Yellow Crystal" /></td>
+<td><code v-pre>atwgem3</code></td>
+<td>Yellow Crystal</td>
+<td>item_simple</td>
+<td>common</td>
+<td><code v-pre>giveitem me atwgem3 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwgem4.png" alt="Blue Crystal" /></td>
+<td><code v-pre>atwgem4</code></td>
+<td>Blue Crystal</td>
+<td>item_simple</td>
+<td>common</td>
+<td><code v-pre>giveitem me atwgem4 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwgem5.png" alt="Silver Stone" /></td>
+<td><code v-pre>atwgem5</code></td>
+<td>Silver Stone</td>
+<td>item_simple</td>
+<td>common</td>
+<td><code v-pre>giveitem me atwgem5 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwgem6.png" alt="Gold" /></td>
+<td><code v-pre>atwgem6</code></td>
+<td>Gold</td>
+<td>item_simple</td>
+<td>common</td>
+<td><code v-pre>giveitem me atwgem6 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwgem7.png" alt="Sapphire" /></td>
+<td><code v-pre>atwgem7</code></td>
+<td>Sapphire</td>
+<td>item_simple</td>
+<td>common</td>
+<td><code v-pre>giveitem me atwgem7 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwgem8.png" alt="Spinel" /></td>
+<td><code v-pre>atwgem8</code></td>
+<td>Spinel</td>
+<td>item_simple</td>
+<td>common</td>
+<td><code v-pre>giveitem me atwgem8 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwgem9.png" alt="Rune Stone" /></td>
+<td><code v-pre>atwgem9</code></td>
+<td>Rune Stone</td>
+<td>item_simple</td>
+<td>common</td>
+<td><code v-pre>giveitem me atwgem9 1</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwgem10</code></td>
+<td>Blue Rock</td>
+<td>item_simple</td>
+<td>common</td>
+<td><code v-pre>giveitem me atwgem10 1</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwgem11</code></td>
+<td>Red Rock</td>
+<td>item_simple</td>
+<td>common</td>
+<td><code v-pre>giveitem me atwgem11 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwaml1.png" alt="Hercules" /></td>
+<td><code v-pre>atwaml1</code></td>
+<td>Hercules</td>
+<td>item_simple</td>
+<td>common</td>
+<td><code v-pre>giveitem me atwaml1 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwaml2.png" alt="Rarity" /></td>
+<td><code v-pre>atwaml2</code></td>
+<td>Rarity</td>
+<td>item_simple</td>
+<td>common</td>
+<td><code v-pre>giveitem me atwaml2 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwaml3.png" alt="Trenderhoof" /></td>
+<td><code v-pre>atwaml3</code></td>
+<td>Trenderhoof</td>
+<td>item_simple</td>
+<td>common</td>
+<td><code v-pre>giveitem me atwaml3 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwaml4.png" alt="DarkKing" /></td>
+<td><code v-pre>atwaml4</code></td>
+<td>DarkKing</td>
+<td>item_simple</td>
+<td>common</td>
+<td><code v-pre>giveitem me atwaml4 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwaml5.png" alt="Alex Celestia" /></td>
+<td><code v-pre>atwaml5</code></td>
+<td>Alex Celestia</td>
+<td>item_simple</td>
+<td>common</td>
+<td><code v-pre>giveitem me atwaml5 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwaml6.png" alt="Bucephalus" /></td>
+<td><code v-pre>atwaml6</code></td>
+<td>Bucephalus</td>
+<td>item_simple</td>
+<td>common</td>
+<td><code v-pre>giveitem me atwaml6 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwaml7.png" alt="Hao" /></td>
+<td><code v-pre>atwaml7</code></td>
+<td>Hao</td>
+<td>item_simple</td>
+<td>common</td>
+<td><code v-pre>giveitem me atwaml7 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwaml8.png" alt="Khan Kluay" /></td>
+<td><code v-pre>atwaml8</code></td>
+<td>Khan Kluay</td>
+<td>item_simple</td>
+<td>common</td>
+<td><code v-pre>giveitem me atwaml8 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwaml9.png" alt="Luna" /></td>
+<td><code v-pre>atwaml9</code></td>
+<td>Luna</td>
+<td>item_simple</td>
+<td>common</td>
+<td><code v-pre>giveitem me atwaml9 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwaml10.png" alt="Adam" /></td>
+<td><code v-pre>atwaml10</code></td>
+<td>Adam</td>
+<td>item_simple</td>
+<td>common</td>
+<td><code v-pre>giveitem me atwaml10 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwaml11.png" alt="deera" /></td>
+<td><code v-pre>atwaml11</code></td>
+<td>deera</td>
+<td>item_simple</td>
+<td>common</td>
+<td><code v-pre>giveitem me atwaml11 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwaml12.png" alt="Tommy" /></td>
+<td><code v-pre>atwaml12</code></td>
+<td>Tommy</td>
+<td>item_simple</td>
+<td>common</td>
+<td><code v-pre>giveitem me atwaml12 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwaml13.png" alt="Cowie" /></td>
+<td><code v-pre>atwaml13</code></td>
+<td>Cowie</td>
+<td>item_simple</td>
+<td>common</td>
+<td><code v-pre>giveitem me atwaml13 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwboxa1.png" alt="Close V1-1" /></td>
+<td><code v-pre>atwboxa1</code></td>
+<td>Close V1-1</td>
+<td>item_simple</td>
+<td>common</td>
+<td><code v-pre>giveitem me atwboxa1 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwboxa2.png" alt="Close V1-2" /></td>
+<td><code v-pre>atwboxa2</code></td>
+<td>Close V1-2</td>
+<td>item_simple</td>
+<td>common</td>
+<td><code v-pre>giveitem me atwboxa2 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwboxa3.png" alt="Close V1-3" /></td>
+<td><code v-pre>atwboxa3</code></td>
+<td>Close V1-3</td>
+<td>item_simple</td>
+<td>common</td>
+<td><code v-pre>giveitem me atwboxa3 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwst1.png" alt="Star Red" /></td>
+<td><code v-pre>atwst1</code></td>
+<td>Star Red</td>
+<td>item_simple</td>
+<td>common</td>
+<td><code v-pre>giveitem me atwst1 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwst2.png" alt="Star Yellow" /></td>
+<td><code v-pre>atwst2</code></td>
+<td>Star Yellow</td>
+<td>item_simple</td>
+<td>common</td>
+<td><code v-pre>giveitem me atwst2 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwst3.png" alt="Star Blue" /></td>
+<td><code v-pre>atwst3</code></td>
+<td>Star Blue</td>
+<td>item_simple</td>
+<td>common</td>
+<td><code v-pre>giveitem me atwst3 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwst4.png" alt="Star Green" /></td>
+<td><code v-pre>atwst4</code></td>
+<td>Star Green</td>
+<td>item_simple</td>
+<td>common</td>
+<td><code v-pre>giveitem me atwst4 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwtr1.png" alt="Augmente les chances d'amélioration de 5 %" /></td>
+<td><code v-pre>atwtr1</code></td>
+<td>Augmente les chances d&#x27;amélioration de 5 %</td>
+<td>item_simple</td>
+<td>common</td>
+<td><code v-pre>giveitem me atwtr1 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwtr2.png" alt="Triangle Yellow" /></td>
+<td><code v-pre>atwtr2</code></td>
+<td>Triangle Yellow</td>
+<td>item_simple</td>
+<td>common</td>
+<td><code v-pre>giveitem me atwtr2 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwtr3.png" alt="Triangle Blue" /></td>
+<td><code v-pre>atwtr3</code></td>
+<td>Triangle Blue</td>
+<td>item_simple</td>
+<td>common</td>
+<td><code v-pre>giveitem me atwtr3 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwtr4.png" alt="Triangle Green" /></td>
+<td><code v-pre>atwtr4</code></td>
+<td>Triangle Green</td>
+<td>item_simple</td>
+<td>common</td>
+<td><code v-pre>giveitem me atwtr4 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwci1.png" alt="Circle Red" /></td>
+<td><code v-pre>atwci1</code></td>
+<td>Circle Red</td>
+<td>item_simple</td>
+<td>common</td>
+<td><code v-pre>giveitem me atwci1 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwci2.png" alt="Circle Yellow" /></td>
+<td><code v-pre>atwci2</code></td>
+<td>Circle Yellow</td>
+<td>item_simple</td>
+<td>common</td>
+<td><code v-pre>giveitem me atwci2 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwci3.png" alt="Circle Blue" /></td>
+<td><code v-pre>atwci3</code></td>
+<td>Circle Blue</td>
+<td>item_simple</td>
+<td>common</td>
+<td><code v-pre>giveitem me atwci3 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwci4.png" alt="Circle Green" /></td>
+<td><code v-pre>atwci4</code></td>
+<td>Circle Green</td>
+<td>item_simple</td>
+<td>common</td>
+<td><code v-pre>giveitem me atwci4 1</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwpsw_skin1</code></td>
+<td>Deathraze</td>
+<td>item_skin</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me atwwpsw_skin1 1</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwpsw_skin2</code></td>
+<td>Shadowfang</td>
+<td>item_skin</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me atwwpsw_skin2 1</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwpsw_skin3</code></td>
+<td>Fallen Champion</td>
+<td>item_skin</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me atwwpsw_skin3 1</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwpsw_skin4</code></td>
+<td>Doombringer</td>
+<td>item_skin</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me atwwpsw_skin4 1</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwpsw_skin5</code></td>
+<td>Justifier</td>
+<td>item_skin</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me atwwpsw_skin5 1</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwpsw_skin6</code></td>
+<td>Apocalypse</td>
+<td>item_skin</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me atwwpsw_skin6 1</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwpstaf_skin1</code></td>
+<td>Infinity</td>
+<td>item_skin</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me atwwpstaf_skin1 1</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwpstaf_skin2</code></td>
+<td>Moonknight</td>
+<td>item_skin</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me atwwpstaf_skin2 1</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwpstaf_skin3</code></td>
+<td>Faithkeeper</td>
+<td>item_skin</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me atwwpstaf_skin3 1</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwpstaf_skin4</code></td>
+<td>Dragonwrath</td>
+<td>item_skin</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me atwwpstaf_skin4 1</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwpstaf_skin5</code></td>
+<td>Demonic</td>
+<td>item_skin</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me atwwpstaf_skin5 1</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwpsws_skin1a</code></td>
+<td>Valentine Sword</td>
+<td>item_skin</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me atwwpsws_skin1a 1</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwpsws_skin1b</code></td>
+<td>Valentine Shield</td>
+<td>item_skin</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me atwwpsws_skin1b 1</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwpsws_skin2a</code></td>
+<td>Kingdom&#x27;s Pride Sword</td>
+<td>item_skin</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me atwwpsws_skin2a 1</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwpsws_skin2b</code></td>
+<td>Kingdom&#x27;s Pride shield</td>
+<td>item_skin</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me atwwpsws_skin2b 1</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwpsws_skin3a</code></td>
+<td>Barbarian Warden Sword</td>
+<td>item_skin</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me atwwpsws_skin3a 1</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwpsws_skin3b</code></td>
+<td>Barbarian Warden shield</td>
+<td>item_skin</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me atwwpsws_skin3b 1</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwpbsw_skin1</code></td>
+<td>Dawnbreaker</td>
+<td>item_skin</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me atwwpbsw_skin1 1</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwpbsw_skin2</code></td>
+<td>Valkyrie</td>
+<td>item_skin</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me atwwpbsw_skin2 1</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwpbsw_skin3</code></td>
+<td>The Barricade</td>
+<td>item_skin</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me atwwpbsw_skin3 1</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwpspe_skin1</code></td>
+<td>Honor&#x27;s Call</td>
+<td>item_skin</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me atwwpspe_skin1 1</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwpspe_skin2</code></td>
+<td>Nethersbane</td>
+<td>item_skin</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me atwwpspe_skin2 1</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwpspe_skin3</code></td>
+<td>Shadowmoon</td>
+<td>item_skin</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me atwwpspe_skin3 1</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwpspe_skin4</code></td>
+<td>Knight&#x27;s Piercer</td>
+<td>item_skin</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me atwwpspe_skin4 1</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwpbow_skin1</code></td>
+<td>Windstalker</td>
+<td>item_skin</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me atwwpbow_skin1 1</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwpbow_skin2</code></td>
+<td>Golden Edge</td>
+<td>item_skin</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me atwwpbow_skin2 1</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwpbow_skin3</code></td>
+<td>Last Whisper</td>
+<td>item_skin</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me atwwpbow_skin3 1</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwpbow_skin4</code></td>
+<td>Siren&#x27;s Song</td>
+<td>item_skin</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me atwwpbow_skin4 1</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwpbow_skin5</code></td>
+<td>Devil&#x27;s Sting</td>
+<td>item_skin</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me atwwpbow_skin5 1</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwpbow_skin6</code></td>
+<td>Meteor Storm</td>
+<td>item_skin</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me atwwpbow_skin6 1</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwpbow_skin7</code></td>
+<td>Kiss of Death</td>
+<td>item_skin</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me atwwpbow_skin7 1</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwpbow_skin8</code></td>
+<td>Arrowspike</td>
+<td>item_skin</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me atwwpbow_skin8 1</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwpbow_skin9</code></td>
+<td>Willow Warbow</td>
+<td>item_skin</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me atwwpbow_skin9 1</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwpbow_skin10</code></td>
+<td>Fling</td>
+<td>item_skin</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me atwwpbow_skin10 1</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwpbow_skin11</code></td>
+<td>Sudden Death</td>
+<td>item_skin</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me atwwpbow_skin11 1</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwpbow_skin12</code></td>
+<td>Kachou Fuugetsu</td>
+<td>item_skin</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me atwwpbow_skin12 1</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwpfan_skin1</code></td>
+<td>Golden Sakura</td>
+<td>item_skin</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me atwwpfan_skin1 1</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwpfan_skin2</code></td>
+<td>Purple Twinkle</td>
+<td>item_skin</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me atwwpfan_skin2 1</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwpfan_skin3</code></td>
+<td>light Twinkle</td>
+<td>item_skin</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me atwwpfan_skin3 1</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwpfan_skin4</code></td>
+<td>yellow Twinkle</td>
+<td>item_skin</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me atwwpfan_skin4 1</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwpfan_skin5</code></td>
+<td>Black Twinkle</td>
+<td>item_skin</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me atwwpfan_skin5 1</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwpfan_skin6</code></td>
+<td>Red Twinkle</td>
+<td>item_skin</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me atwwpfan_skin6 1</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwpstk_skin1</code></td>
+<td>Ghostreaver</td>
+<td>item_skin</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me atwwpstk_skin1 1</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwpstk_skin2</code></td>
+<td>Cyclone</td>
+<td>item_skin</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me atwwpstk_skin2 1</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwpstk_skin3</code></td>
+<td>Eternity</td>
+<td>item_skin</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me atwwpstk_skin3 1</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwp12_lighting</code></td>
+<td>Skin name</td>
+<td>item_skin</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me atwwp12_lighting 1</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwwp12_unknow</code></td>
+<td>Skin name 2</td>
+<td>item_skin</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me atwwp12_unknow 1</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>animal_frostborn</code></td>
+<td>Skin name 3</td>
+<td>item_skin</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me animal_frostborn 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwhat1.png" alt="BunBun Hat" /></td>
+<td><code v-pre>atwhat1</code></td>
+<td>BunBun Hat</td>
+<td>item_equip_head</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me atwhat1 1</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwhat1_1</code></td>
+<td>Earbun Hat</td>
+<td>item_equip_head</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me atwhat1_1 1</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwhat1_2</code></td>
+<td>rabbit Hat</td>
+<td>item_equip_head</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me atwhat1_2 1</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwhat1_3</code></td>
+<td>Bunny Hat</td>
+<td>item_equip_head</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me atwhat1_3 1</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwhat2</code></td>
+<td>atwhat2</td>
+<td>item_equip_head</td>
+<td>common</td>
+<td><code v-pre>giveitem me atwhat2 1</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwnhat1</code></td>
+<td>BunBun Hat</td>
+<td>item_equip_head</td>
+<td>common</td>
+<td><code v-pre>giveitem me atwnhat1 1</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwnhat1_1</code></td>
+<td>Cutie Hat</td>
+<td>item_equip_head</td>
+<td>common</td>
+<td><code v-pre>giveitem me atwnhat1_1 1</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwnhat1_2</code></td>
+<td>Pink Hat</td>
+<td>item_equip_head</td>
+<td>common</td>
+<td><code v-pre>giveitem me atwnhat1_2 1</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwnhat1_3</code></td>
+<td>BonBon Hat</td>
+<td>item_equip_head</td>
+<td>common</td>
+<td><code v-pre>giveitem me atwnhat1_3 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwmk1.png" alt="Mask 1" /></td>
+<td><code v-pre>atwmk1</code></td>
+<td>Mask 1</td>
+<td>item_equip_mask</td>
+<td>common</td>
+<td><code v-pre>giveitem me atwmk1 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwmk2.png" alt="Snake Mask" /></td>
+<td><code v-pre>atwmk2</code></td>
+<td>Snake Mask</td>
+<td>item_equip_mask</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me atwmk2 1</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwmk2_1</code></td>
+<td>Eye Mask</td>
+<td>item_equip_mask</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me atwmk2_1 1</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwmk2_2</code></td>
+<td>Foxy Mask</td>
+<td>item_equip_mask</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me atwmk2_2 1</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwmk2_3</code></td>
+<td>Herb Mask</td>
+<td>item_equip_mask</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me atwmk2_3 1</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwnmk1</code></td>
+<td>Snake Mask</td>
+<td>item_equip_mask</td>
+<td>common</td>
+<td><code v-pre>giveitem me atwnmk1 1</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwnmk1_1</code></td>
+<td>Bamboo Mask</td>
+<td>item_equip_mask</td>
+<td>common</td>
+<td><code v-pre>giveitem me atwnmk1_1 1</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwnmk1_2</code></td>
+<td>Egg Mask</td>
+<td>item_equip_mask</td>
+<td>common</td>
+<td><code v-pre>giveitem me atwnmk1_2 1</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwnmk1_3</code></td>
+<td>Avocado Mask</td>
+<td>item_equip_mask</td>
+<td>common</td>
+<td><code v-pre>giveitem me atwnmk1_3 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwbt1.png" alt="Adventure Belt" /></td>
+<td><code v-pre>atwbt1</code></td>
+<td>Adventure Belt</td>
+<td>item_equip_belt</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me atwbt1 1</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwbt1_1</code></td>
+<td>Old Belt</td>
+<td>item_equip_belt</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me atwbt1_1 1</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwbt1_2</code></td>
+<td>Father&#x27;s Belt</td>
+<td>item_equip_belt</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me atwbt1_2 1</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwbt2</code></td>
+<td>atwbt2</td>
+<td>item_equip_belt</td>
+<td>common</td>
+<td><code v-pre>giveitem me atwbt2 1</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwbt3</code></td>
+<td>atwbt3</td>
+<td>item_equip_belt</td>
+<td>common</td>
+<td><code v-pre>giveitem me atwbt3 1</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwnbt1</code></td>
+<td>Adventure Belt</td>
+<td>item_equip_belt</td>
+<td>common</td>
+<td><code v-pre>giveitem me atwnbt1 1</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwnbt1_1</code></td>
+<td>Snake Belt</td>
+<td>item_equip_belt</td>
+<td>common</td>
+<td><code v-pre>giveitem me atwnbt1_1 1</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwnbt1_2</code></td>
+<td>Pig Belt</td>
+<td>item_equip_belt</td>
+<td>common</td>
+<td><code v-pre>giveitem me atwnbt1_2 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwgl1.png" alt="Marble Bracelet" /></td>
+<td><code v-pre>atwgl1</code></td>
+<td>Marble Bracelet</td>
+<td>item_equip_glove</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me atwgl1 1</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwgl1_1</code></td>
+<td>Iron Bracelet</td>
+<td>item_equip_glove</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me atwgl1_1 1</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwgl1_2</code></td>
+<td>Gold Bracelet</td>
+<td>item_equip_glove</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me atwgl1_2 1</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwgl1_3</code></td>
+<td>Bronze Bracelet</td>
+<td>item_equip_glove</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me atwgl1_3 1</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwgl2</code></td>
+<td>atwgl2</td>
+<td>item_equip_glove</td>
+<td>common</td>
+<td><code v-pre>giveitem me atwgl2 1</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwgl3</code></td>
+<td>atwgl3</td>
+<td>item_equip_glove</td>
+<td>common</td>
+<td><code v-pre>giveitem me atwgl3 1</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwgl4</code></td>
+<td>atwgl4</td>
+<td>item_equip_glove</td>
+<td>common</td>
+<td><code v-pre>giveitem me atwgl4 1</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwngl1</code></td>
+<td>Marble Bracelet</td>
+<td>item_equip_glove</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me atwngl1 1</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwngl1_1</code></td>
+<td>Iron Bracelet</td>
+<td>item_equip_glove</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me atwngl1_1 1</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwngl1_2</code></td>
+<td>Silver Bracelet</td>
+<td>item_equip_glove</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me atwngl1_2 1</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwngl1_3</code></td>
+<td>Gold Bracelet</td>
+<td>item_equip_glove</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me atwngl1_3 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwrg1.png" alt="Marble Ring" /></td>
+<td><code v-pre>atwrg1</code></td>
+<td>Marble Ring</td>
+<td>item_equip_ring</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me atwrg1 1</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwrg1_1</code></td>
+<td>Rock Ring</td>
+<td>item_equip_ring</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me atwrg1_1 1</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwrg1_2</code></td>
+<td>Stone Ring</td>
+<td>item_equip_ring</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me atwrg1_2 1</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwrg1_3</code></td>
+<td>Semi-Marble Ring</td>
+<td>item_equip_ring</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me atwrg1_3 1</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwrg2</code></td>
+<td>atwrg2</td>
+<td>item_equip_ring</td>
+<td>common</td>
+<td><code v-pre>giveitem me atwrg2 1</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwrg3</code></td>
+<td>atwrg3</td>
+<td>item_equip_ring</td>
+<td>common</td>
+<td><code v-pre>giveitem me atwrg3 1</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwnrg1</code></td>
+<td>Marble Ring</td>
+<td>item_equip_ring</td>
+<td>common</td>
+<td><code v-pre>giveitem me atwnrg1 1</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwnrg1_1</code></td>
+<td>Iron Ring</td>
+<td>item_equip_ring</td>
+<td>common</td>
+<td><code v-pre>giveitem me atwnrg1_1 1</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwnrg1_2</code></td>
+<td>Silver Ring</td>
+<td>item_equip_ring</td>
+<td>common</td>
+<td><code v-pre>giveitem me atwnrg1_2 1</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwnrg1_3</code></td>
+<td>Gold Ring</td>
+<td>item_equip_ring</td>
+<td>common</td>
+<td><code v-pre>giveitem me atwnrg1_3 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwerg1.png" alt="Marble Earring" /></td>
+<td><code v-pre>atwerg1</code></td>
+<td>Marble Earring</td>
+<td>item_equip_accessories</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me atwerg1 1</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwerg1_1</code></td>
+<td>Iron Earring</td>
+<td>item_equip_accessories</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me atwerg1_1 1</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwerg1_2</code></td>
+<td>Silver Earring</td>
+<td>item_equip_accessories</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me atwerg1_2 1</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwerg1_3</code></td>
+<td>Gold Earring</td>
+<td>item_equip_accessories</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me atwerg1_3 1</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwerg2</code></td>
+<td>atwerg2</td>
+<td>item_equip_accessories</td>
+<td>common</td>
+<td><code v-pre>giveitem me atwerg2 1</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwnerg1</code></td>
+<td>Marble Earring</td>
+<td>item_equip_accessories</td>
+<td>common</td>
+<td><code v-pre>giveitem me atwnerg1 1</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwnerg1_1</code></td>
+<td>Iron Earring</td>
+<td>item_equip_accessories</td>
+<td>common</td>
+<td><code v-pre>giveitem me atwnerg1_1 1</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwnerg1_2</code></td>
+<td>Silver Earring</td>
+<td>item_equip_accessories</td>
+<td>common</td>
+<td><code v-pre>giveitem me atwnerg1_2 1</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwnerg1_3</code></td>
+<td>Gold Earring</td>
+<td>item_equip_accessories</td>
+<td>common</td>
+<td><code v-pre>giveitem me atwnerg1_3 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwft1.png" alt="Sneaky Mushroom" /></td>
+<td><code v-pre>atwft1</code></td>
+<td>Sneaky Mushroom</td>
+<td>item_equip_shoe</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me atwft1 1</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwft1_1</code></td>
+<td>Red Mushroom</td>
+<td>item_equip_shoe</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me atwft1_1 1</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwft1_2</code></td>
+<td>Mini Mushroom</td>
+<td>item_equip_shoe</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me atwft1_2 1</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwft1_3</code></td>
+<td>Small Mushroom</td>
+<td>item_equip_shoe</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me atwft1_3 1</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwft2</code></td>
+<td>atwft2</td>
+<td>item_equip_shoe</td>
+<td>common</td>
+<td><code v-pre>giveitem me atwft2 1</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwft3</code></td>
+<td>atwft3</td>
+<td>item_equip_shoe</td>
+<td>common</td>
+<td><code v-pre>giveitem me atwft3 1</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwnft1</code></td>
+<td>Sneaky Mushroom</td>
+<td>item_equip_shoe</td>
+<td>common</td>
+<td><code v-pre>giveitem me atwnft1 1</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwnft1_1</code></td>
+<td>Red Mushroom</td>
+<td>item_equip_shoe</td>
+<td>common</td>
+<td><code v-pre>giveitem me atwnft1_1 1</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwnft1_2</code></td>
+<td>Cutie Mushroom</td>
+<td>item_equip_shoe</td>
+<td>common</td>
+<td><code v-pre>giveitem me atwnft1_2 1</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwnft1_3</code></td>
+<td>Small Mushroom</td>
+<td>item_equip_shoe</td>
+<td>common</td>
+<td><code v-pre>giveitem me atwnft1_3 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwnk1.png" alt="Zuluu Necklace" /></td>
+<td><code v-pre>atwnk1</code></td>
+<td>Zuluu Necklace</td>
+<td>item_equip_accessories</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me atwnk1 1</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwnk1_1</code></td>
+<td>ZuZu Necklace</td>
+<td>item_equip_accessories</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me atwnk1_1 1</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwnk1_2</code></td>
+<td>Old Necklace</td>
+<td>item_equip_accessories</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me atwnk1_2 1</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwnk1_3</code></td>
+<td>Mama&#x27;s Necklace</td>
+<td>item_equip_accessories</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me atwnk1_3 1</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwnk2</code></td>
+<td>atwnk2</td>
+<td>item_equip_accessories</td>
+<td>common</td>
+<td><code v-pre>giveitem me atwnk2 1</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwnk3</code></td>
+<td>atwnk3</td>
+<td>item_equip_accessories</td>
+<td>common</td>
+<td><code v-pre>giveitem me atwnk3 1</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwnk4</code></td>
+<td>atwnk4</td>
+<td>item_equip_accessories</td>
+<td>common</td>
+<td><code v-pre>giveitem me atwnk4 1</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwnnk1</code></td>
+<td>Zuluu Necklace</td>
+<td>item_equip_accessories</td>
+<td>common</td>
+<td><code v-pre>giveitem me atwnnk1 1</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwnnk1_1</code></td>
+<td>ZuZu Necklace</td>
+<td>item_equip_accessories</td>
+<td>common</td>
+<td><code v-pre>giveitem me atwnnk1_1 1</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwnnk1_2</code></td>
+<td>Old Necklace</td>
+<td>item_equip_accessories</td>
+<td>common</td>
+<td><code v-pre>giveitem me atwnnk1_2 1</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwnnk1_3</code></td>
+<td>Mama&#x27;s Necklace</td>
+<td>item_equip_accessories</td>
+<td>common</td>
+<td><code v-pre>giveitem me atwnnk1_3 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwar1.png" alt="Silver Armor" /></td>
+<td><code v-pre>atwar1</code></td>
+<td>Silver Armor</td>
+<td>item_equip_armor</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me atwar1 1</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwar1_1</code></td>
+<td>Iron Armor</td>
+<td>item_equip_armor</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me atwar1_1 1</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwar1_2</code></td>
+<td>Bronze Armor</td>
+<td>item_equip_armor</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me atwar1_2 1</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwar1_3</code></td>
+<td>Rock Armor</td>
+<td>item_equip_armor</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me atwar1_3 1</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwar2</code></td>
+<td>atwar2</td>
+<td>item_equip_armor</td>
+<td>common</td>
+<td><code v-pre>giveitem me atwar2 1</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwnar1</code></td>
+<td>Silver Armor</td>
+<td>item_equip_armor</td>
+<td>common</td>
+<td><code v-pre>giveitem me atwnar1 1</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwnar1_1</code></td>
+<td>Iron Armor</td>
+<td>item_equip_armor</td>
+<td>common</td>
+<td><code v-pre>giveitem me atwnar1_1 1</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwnar1_2</code></td>
+<td>Bronze Armor</td>
+<td>item_equip_armor</td>
+<td>common</td>
+<td><code v-pre>giveitem me atwnar1_2 1</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwnar1_3</code></td>
+<td>Rock Armor</td>
+<td>item_equip_armor</td>
+<td>common</td>
+<td><code v-pre>giveitem me atwnar1_3 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atwpa1.png" alt="Chinos Pant" /></td>
+<td><code v-pre>atwpa1</code></td>
+<td>Chinos Pant</td>
+<td>item_equip_pant</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me atwpa1 1</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwpa1_1</code></td>
+<td>Linen Pant</td>
+<td>item_equip_pant</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me atwpa1_1 1</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwpa1_2</code></td>
+<td>Denims Pant</td>
+<td>item_equip_pant</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me atwpa1_2 1</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwpa2</code></td>
+<td>atwpa2</td>
+<td>item_equip_pant</td>
+<td>common</td>
+<td><code v-pre>giveitem me atwpa2 1</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwpa3</code></td>
+<td>atwpa3</td>
+<td>item_equip_pant</td>
+<td>common</td>
+<td><code v-pre>giveitem me atwpa3 1</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwnpa1</code></td>
+<td>Chinos Pant</td>
+<td>item_equip_pant</td>
+<td>common</td>
+<td><code v-pre>giveitem me atwnpa1 1</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwnpa1_1</code></td>
+<td>Linen Pant</td>
+<td>item_equip_pant</td>
+<td>common</td>
+<td><code v-pre>giveitem me atwnpa1_1 1</code></td>
+</tr>
+<tr>
+<td>—</td>
+<td><code v-pre>atwnpa1_2</code></td>
+<td>Denims Pant</td>
+<td>item_equip_pant</td>
+<td>common</td>
+<td><code v-pre>giveitem me atwnpa1_2 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/afwanifs1.png" alt="Mechanical Bag" /></td>
+<td><code v-pre>afwanifs1</code></td>
+<td>Mechanical Bag</td>
+<td>item_fashion</td>
+<td>legendary</td>
+<td><code v-pre>giveitem me afwanifs1 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/afwanifs2.png" alt="Bamboo Copter" /></td>
+<td><code v-pre>afwanifs2</code></td>
+<td>Bamboo Copter</td>
+<td>item_fashion</td>
+<td>legendary</td>
+<td><code v-pre>giveitem me afwanifs2 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/afwanifs3.png" alt="Devil Solomon Wing" /></td>
+<td><code v-pre>afwanifs3</code></td>
+<td>Devil Solomon Wing</td>
+<td>item_fashion</td>
+<td>legendary</td>
+<td><code v-pre>giveitem me afwanifs3 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/afwanifs4.png" alt="Butterfly Blue" /></td>
+<td><code v-pre>afwanifs4</code></td>
+<td>Butterfly Blue</td>
+<td>item_fashion</td>
+<td>legendary</td>
+<td><code v-pre>giveitem me afwanifs4 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/afwanifs5.png" alt="Butterfly Green" /></td>
+<td><code v-pre>afwanifs5</code></td>
+<td>Butterfly Green</td>
+<td>item_fashion</td>
+<td>legendary</td>
+<td><code v-pre>giveitem me afwanifs5 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/afwanifs6.png" alt="Butterfly Pink" /></td>
+<td><code v-pre>afwanifs6</code></td>
+<td>Butterfly Pink</td>
+<td>item_fashion</td>
+<td>legendary</td>
+<td><code v-pre>giveitem me afwanifs6 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/afwanifs7.png" alt="Fallen Angel" /></td>
+<td><code v-pre>afwanifs7</code></td>
+<td>Fallen Angel</td>
+<td>item_fashion</td>
+<td>legendary</td>
+<td><code v-pre>giveitem me afwanifs7 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/afwanifs8.png" alt="Bunnycup" /></td>
+<td><code v-pre>afwanifs8</code></td>
+<td>Bunnycup</td>
+<td>item_fashion</td>
+<td>legendary</td>
+<td><code v-pre>giveitem me afwanifs8 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/afwanifs9.png" alt="halo_anim" /></td>
+<td><code v-pre>afwanifs9</code></td>
+<td>halo_anim</td>
+<td>item_fashion</td>
+<td>legendary</td>
+<td><code v-pre>giveitem me afwanifs9 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/afwfs1.png" alt="Tiny Crown" /></td>
+<td><code v-pre>afwfs1</code></td>
+<td>Tiny Crown</td>
+<td>item_fashion</td>
+<td>legendary</td>
+<td><code v-pre>giveitem me afwfs1 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/afwfs2.png" alt="Temee Bracelet" /></td>
+<td><code v-pre>afwfs2</code></td>
+<td>Temee Bracelet</td>
+<td>item_fashion</td>
+<td>legendary</td>
+<td><code v-pre>giveitem me afwfs2 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/afwfs3.png" alt="Fake Bunnycup" /></td>
+<td><code v-pre>afwfs3</code></td>
+<td>Fake Bunnycup</td>
+<td>item_fashion</td>
+<td>legendary</td>
+<td><code v-pre>giveitem me afwfs3 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/afwfs4.png" alt="Fake Fallen Angel" /></td>
+<td><code v-pre>afwfs4</code></td>
+<td>Fake Fallen Angel</td>
+<td>item_fashion</td>
+<td>legendary</td>
+<td><code v-pre>giveitem me afwfs4 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/afwfs5.png" alt="King Crown" /></td>
+<td><code v-pre>afwfs5</code></td>
+<td>King Crown</td>
+<td>item_fashion</td>
+<td>legendary</td>
+<td><code v-pre>giveitem me afwfs5 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/afwfs6.png" alt="Queen Crown" /></td>
+<td><code v-pre>afwfs6</code></td>
+<td>Queen Crown</td>
+<td>item_fashion</td>
+<td>legendary</td>
+<td><code v-pre>giveitem me afwfs6 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/afwfr1.png" alt="Zeus" /></td>
+<td><code v-pre>afwfr1</code></td>
+<td>Zeus</td>
+<td>item_transfrom</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me afwfr1 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/afwfr2.png" alt="Sumuder" /></td>
+<td><code v-pre>afwfr2</code></td>
+<td>Sumuder</td>
+<td>item_transfrom</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me afwfr2 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/afwfr3.png" alt="Bionic" /></td>
+<td><code v-pre>afwfr3</code></td>
+<td>Bionic</td>
+<td>item_transfrom</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me afwfr3 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/afwfr4.png" alt="lenore" /></td>
+<td><code v-pre>afwfr4</code></td>
+<td>lenore</td>
+<td>item_transfrom</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me afwfr4 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/afwfr5.png" alt="Angela" /></td>
+<td><code v-pre>afwfr5</code></td>
+<td>Angela</td>
+<td>item_transfrom</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me afwfr5 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/afwfr6.png" alt="Butterfly" /></td>
+<td><code v-pre>afwfr6</code></td>
+<td>Butterfly</td>
+<td>item_transfrom</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me afwfr6 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/afwfr7.png" alt="Lunox" /></td>
+<td><code v-pre>afwfr7</code></td>
+<td>Lunox</td>
+<td>item_transfrom</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me afwfr7 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/afwfr8.png" alt="Vale" /></td>
+<td><code v-pre>afwfr8</code></td>
+<td>Vale</td>
+<td>item_transfrom</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me afwfr8 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/afwfr9.png" alt="Spiritus" /></td>
+<td><code v-pre>afwfr9</code></td>
+<td>Spiritus</td>
+<td>item_transfrom</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me afwfr9 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/afwfr10.png" alt="Vexana" /></td>
+<td><code v-pre>afwfr10</code></td>
+<td>Vexana</td>
+<td>item_transfrom</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me afwfr10 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/afwfr11.png" alt="Oroch" /></td>
+<td><code v-pre>afwfr11</code></td>
+<td>Oroch</td>
+<td>item_transfrom</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me afwfr11 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/afwfr12.png" alt="Stardust" /></td>
+<td><code v-pre>afwfr12</code></td>
+<td>Stardust</td>
+<td>item_transfrom</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me afwfr12 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/afwfr13.png" alt="Pando" /></td>
+<td><code v-pre>afwfr13</code></td>
+<td>Pando</td>
+<td>item_transfrom</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me afwfr13 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/afwfr14.png" alt="P P" /></td>
+<td><code v-pre>afwfr14</code></td>
+<td>P P</td>
+<td>item_transfrom</td>
+<td>rare</td>
+<td><code v-pre>giveitem me afwfr14 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atsafebox01.png" alt="EXP Box set 1" /></td>
+<td><code v-pre>atsafebox01</code></td>
+<td>EXP Box set 1</td>
+<td>item_simple</td>
+<td>rare</td>
+<td><code v-pre>giveitem me atsafebox01 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atsafebox02.png" alt="EXP Box set 2" /></td>
+<td><code v-pre>atsafebox02</code></td>
+<td>EXP Box set 2</td>
+<td>item_simple</td>
+<td>rare</td>
+<td><code v-pre>giveitem me atsafebox02 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atsafebox03.png" alt="EXP Box set 3" /></td>
+<td><code v-pre>atsafebox03</code></td>
+<td>EXP Box set 3</td>
+<td>item_simple</td>
+<td>epic</td>
+<td><code v-pre>giveitem me atsafebox03 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/atsafebox04.png" alt="EXP Box set 4" /></td>
+<td><code v-pre>atsafebox04</code></td>
+<td>EXP Box set 4</td>
+<td>item_simple</td>
+<td>epic</td>
+<td><code v-pre>giveitem me atsafebox04 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/dw1.png" alt="Light Holy Spear" /></td>
+<td><code v-pre>dw1</code></td>
+<td>Light Holy Spear</td>
+<td>item_skin</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me dw1 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/dw2.png" alt="Light Holy Rod" /></td>
+<td><code v-pre>dw2</code></td>
+<td>Light Holy Rod</td>
+<td>item_skin</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me dw2 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/dw3.png" alt="Light Holy Staff" /></td>
+<td><code v-pre>dw3</code></td>
+<td>Light Holy Staff</td>
+<td>item_skin</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me dw3 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/dw4.png" alt="Light Holy Sword" /></td>
+<td><code v-pre>dw4</code></td>
+<td>Light Holy Sword</td>
+<td>item_skin</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me dw4 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/dw29.png" alt="Light Holy Bow" /></td>
+<td><code v-pre>dw29</code></td>
+<td>Light Holy Bow</td>
+<td>item_skin</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me dw29 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/dw30.png" alt="Light Holy Great Sword" /></td>
+<td><code v-pre>dw30</code></td>
+<td>Light Holy Great Sword</td>
+<td>item_skin</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me dw30 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/dw31.png" alt="Light Holy Axe" /></td>
+<td><code v-pre>dw31</code></td>
+<td>Light Holy Axe</td>
+<td>item_skin</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me dw31 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/dw13.png" alt="Grimmua Spear" /></td>
+<td><code v-pre>dw13</code></td>
+<td>Grimmua Spear</td>
+<td>item_skin</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me dw13 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/dw15.png" alt="Grimmua Rod" /></td>
+<td><code v-pre>dw15</code></td>
+<td>Grimmua Rod</td>
+<td>item_skin</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me dw15 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/dw19.png" alt="Grimmua Great Sword" /></td>
+<td><code v-pre>dw19</code></td>
+<td>Grimmua Great Sword</td>
+<td>item_skin</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me dw19 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/dw21.png" alt="Grimmua Axe" /></td>
+<td><code v-pre>dw21</code></td>
+<td>Grimmua Axe</td>
+<td>item_skin</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me dw21 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/dw23.png" alt="Grimmua Staff" /></td>
+<td><code v-pre>dw23</code></td>
+<td>Grimmua Staff</td>
+<td>item_skin</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me dw23 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/dw25.png" alt="Grimmua Sword" /></td>
+<td><code v-pre>dw25</code></td>
+<td>Grimmua Sword</td>
+<td>item_skin</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me dw25 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/dw27.png" alt="Grimmua Bow" /></td>
+<td><code v-pre>dw27</code></td>
+<td>Grimmua Bow</td>
+<td>item_skin</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me dw27 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/wbj1.png" alt="light Purple Butterfly" /></td>
+<td><code v-pre>wbj1</code></td>
+<td>light Purple Butterfly</td>
+<td>item_fashion</td>
+<td>epic</td>
+<td><code v-pre>giveitem me wbj1 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/wbj2.png" alt="light Pink Butterfly" /></td>
+<td><code v-pre>wbj2</code></td>
+<td>light Pink Butterfly</td>
+<td>item_fashion</td>
+<td>epic</td>
+<td><code v-pre>giveitem me wbj2 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/wbj3.png" alt="Yellow Butterfly" /></td>
+<td><code v-pre>wbj3</code></td>
+<td>Yellow Butterfly</td>
+<td>item_fashion</td>
+<td>epic</td>
+<td><code v-pre>giveitem me wbj3 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/wbj4.png" alt="Purple Blue Butterfly" /></td>
+<td><code v-pre>wbj4</code></td>
+<td>Purple Blue Butterfly</td>
+<td>item_fashion</td>
+<td>epic</td>
+<td><code v-pre>giveitem me wbj4 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/wbj5.png" alt="Pink Butterfly" /></td>
+<td><code v-pre>wbj5</code></td>
+<td>Pink Butterfly</td>
+<td>item_fashion</td>
+<td>epic</td>
+<td><code v-pre>giveitem me wbj5 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/wbj6.png" alt="Purple Butterfly" /></td>
+<td><code v-pre>wbj6</code></td>
+<td>Purple Butterfly</td>
+<td>item_fashion</td>
+<td>epic</td>
+<td><code v-pre>giveitem me wbj6 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/wbj7.png" alt="Jade Butterfly" /></td>
+<td><code v-pre>wbj7</code></td>
+<td>Jade Butterfly</td>
+<td>item_fashion</td>
+<td>epic</td>
+<td><code v-pre>giveitem me wbj7 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/wbj8.png" alt="Green Butterfly" /></td>
+<td><code v-pre>wbj8</code></td>
+<td>Green Butterfly</td>
+<td>item_fashion</td>
+<td>epic</td>
+<td><code v-pre>giveitem me wbj8 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/wbj9.png" alt="Burned Pink Butterfly" /></td>
+<td><code v-pre>wbj9</code></td>
+<td>Burned Pink Butterfly</td>
+<td>item_fashion</td>
+<td>epic</td>
+<td><code v-pre>giveitem me wbj9 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/mcrby01.png" alt="CryBaby Yellow Hat" /></td>
+<td><code v-pre>mcrby01</code></td>
+<td>CryBaby Yellow Hat</td>
+<td>item_fashion</td>
+<td>epic</td>
+<td><code v-pre>giveitem me mcrby01 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/mcrby02.png" alt="CryBaby Huge hug" /></td>
+<td><code v-pre>mcrby02</code></td>
+<td>CryBaby Huge hug</td>
+<td>item_fashion</td>
+<td>epic</td>
+<td><code v-pre>giveitem me mcrby02 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/mcrby03.png" alt="CryBaby Chikchik" /></td>
+<td><code v-pre>mcrby03</code></td>
+<td>CryBaby Chikchik</td>
+<td>item_fashion</td>
+<td>epic</td>
+<td><code v-pre>giveitem me mcrby03 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/mcrby04.png" alt="CryBaby Donut" /></td>
+<td><code v-pre>mcrby04</code></td>
+<td>CryBaby Donut</td>
+<td>item_fashion</td>
+<td>epic</td>
+<td><code v-pre>giveitem me mcrby04 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/mcrby05.png" alt="Crying CryBaby" /></td>
+<td><code v-pre>mcrby05</code></td>
+<td>Crying CryBaby</td>
+<td>item_fashion</td>
+<td>epic</td>
+<td><code v-pre>giveitem me mcrby05 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/mcrby06.png" alt="CryBaby Chikchuck" /></td>
+<td><code v-pre>mcrby06</code></td>
+<td>CryBaby Chikchuck</td>
+<td>item_fashion</td>
+<td>epic</td>
+<td><code v-pre>giveitem me mcrby06 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/wing_myt.png" alt="Blue Harmony" /></td>
+<td><code v-pre>wing_myt</code></td>
+<td>Blue Harmony</td>
+<td>item_fashion</td>
+<td>epic</td>
+<td><code v-pre>giveitem me wing_myt 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/wing_myt1.png" alt="Green Harmony" /></td>
+<td><code v-pre>wing_myt1</code></td>
+<td>Green Harmony</td>
+<td>item_fashion</td>
+<td>epic</td>
+<td><code v-pre>giveitem me wing_myt1 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/wing_myt2.png" alt="Yellow Harmony" /></td>
+<td><code v-pre>wing_myt2</code></td>
+<td>Yellow Harmony</td>
+<td>item_fashion</td>
+<td>epic</td>
+<td><code v-pre>giveitem me wing_myt2 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/wing_myt3.png" alt="Purple Harmony" /></td>
+<td><code v-pre>wing_myt3</code></td>
+<td>Purple Harmony</td>
+<td>item_fashion</td>
+<td>epic</td>
+<td><code v-pre>giveitem me wing_myt3 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/wing_myt4.png" alt="Sunset Harmony" /></td>
+<td><code v-pre>wing_myt4</code></td>
+<td>Sunset Harmony</td>
+<td>item_fashion</td>
+<td>epic</td>
+<td><code v-pre>giveitem me wing_myt4 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/wing_myt5.png" alt="Pink Harmony" /></td>
+<td><code v-pre>wing_myt5</code></td>
+<td>Pink Harmony</td>
+<td>item_fashion</td>
+<td>epic</td>
+<td><code v-pre>giveitem me wing_myt5 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/wcj.png" alt="Grimmua Sky Wings" /></td>
+<td><code v-pre>wcj</code></td>
+<td>Grimmua Sky Wings</td>
+<td>item_fashion</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me wcj 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/wcj1.png" alt="Grimmua Magic Wings" /></td>
+<td><code v-pre>wcj1</code></td>
+<td>Grimmua Magic Wings</td>
+<td>item_fashion</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me wcj1 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/wcj2.png" alt="Light Holy Wings" /></td>
+<td><code v-pre>wcj2</code></td>
+<td>Light Holy Wings</td>
+<td>item_fashion</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me wcj2 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/dw47.png" alt="Light Holy Disk" /></td>
+<td><code v-pre>dw47</code></td>
+<td>Light Holy Disk</td>
+<td>item_fashion</td>
+<td>legendary</td>
+<td><code v-pre>giveitem me dw47 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/dw48.png" alt="Grimmua Disk" /></td>
+<td><code v-pre>dw48</code></td>
+<td>Grimmua Disk</td>
+<td>item_fashion</td>
+<td>legendary</td>
+<td><code v-pre>giveitem me dw48 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/faj1.png" alt="Dunny" /></td>
+<td><code v-pre>faj1</code></td>
+<td>Dunny</td>
+<td>item_fashion</td>
+<td>legendary</td>
+<td><code v-pre>giveitem me faj1 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/faj2.png" alt="Dunna" /></td>
+<td><code v-pre>faj2</code></td>
+<td>Dunna</td>
+<td>item_fashion</td>
+<td>legendary</td>
+<td><code v-pre>giveitem me faj2 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/dw49.png" alt="Devil Lord Horn" /></td>
+<td><code v-pre>dw49</code></td>
+<td>Devil Lord Horn</td>
+<td>item_fashion</td>
+<td>epic</td>
+<td><code v-pre>giveitem me dw49 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/dw50.png" alt="Devil Horn" /></td>
+<td><code v-pre>dw50</code></td>
+<td>Devil Horn</td>
+<td>item_fashion</td>
+<td>epic</td>
+<td><code v-pre>giveitem me dw50 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/dw51.png" alt="Devil mons" /></td>
+<td><code v-pre>dw51</code></td>
+<td>Devil mons</td>
+<td>item_fashion</td>
+<td>epic</td>
+<td><code v-pre>giveitem me dw51 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/dw52.png" alt="Young Devil Horn" /></td>
+<td><code v-pre>dw52</code></td>
+<td>Young Devil Horn</td>
+<td>item_fashion</td>
+<td>epic</td>
+<td><code v-pre>giveitem me dw52 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/dw43.png" alt="Bohoma Lord Horn" /></td>
+<td><code v-pre>dw43</code></td>
+<td>Bohoma Lord Horn</td>
+<td>item_fashion</td>
+<td>epic</td>
+<td><code v-pre>giveitem me dw43 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/dw44.png" alt="Bohoma Horn" /></td>
+<td><code v-pre>dw44</code></td>
+<td>Bohoma Horn</td>
+<td>item_fashion</td>
+<td>epic</td>
+<td><code v-pre>giveitem me dw44 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/dw45.png" alt="White Devil Horn" /></td>
+<td><code v-pre>dw45</code></td>
+<td>White Devil Horn</td>
+<td>item_fashion</td>
+<td>epic</td>
+<td><code v-pre>giveitem me dw45 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/dw46.png" alt="Young White devil" /></td>
+<td><code v-pre>dw46</code></td>
+<td>Young White devil</td>
+<td>item_fashion</td>
+<td>epic</td>
+<td><code v-pre>giveitem me dw46 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/dw1.png" alt="Light Holy Spear" /></td>
+<td><code v-pre>dw1</code></td>
+<td>Light Holy Spear</td>
+<td>item_skin</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me dw1 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/dw2.png" alt="Light Holy Rod" /></td>
+<td><code v-pre>dw2</code></td>
+<td>Light Holy Rod</td>
+<td>item_skin</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me dw2 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/dw3.png" alt="Light Holy Staff" /></td>
+<td><code v-pre>dw3</code></td>
+<td>Light Holy Staff</td>
+<td>item_skin</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me dw3 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/dw4.png" alt="Light Holy Sword" /></td>
+<td><code v-pre>dw4</code></td>
+<td>Light Holy Sword</td>
+<td>item_skin</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me dw4 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/dw29.png" alt="Light Holy Bow" /></td>
+<td><code v-pre>dw29</code></td>
+<td>Light Holy Bow</td>
+<td>item_skin</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me dw29 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/dw30.png" alt="Light Holy Great Sword" /></td>
+<td><code v-pre>dw30</code></td>
+<td>Light Holy Great Sword</td>
+<td>item_skin</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me dw30 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/dw31.png" alt="Light Holy Axe" /></td>
+<td><code v-pre>dw31</code></td>
+<td>Light Holy Axe</td>
+<td>item_skin</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me dw31 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/dw13.png" alt="Grimmua Spear" /></td>
+<td><code v-pre>dw13</code></td>
+<td>Grimmua Spear</td>
+<td>item_skin</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me dw13 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/dw15.png" alt="Grimmua Rod" /></td>
+<td><code v-pre>dw15</code></td>
+<td>Grimmua Rod</td>
+<td>item_skin</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me dw15 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/dw19.png" alt="Grimmua Great Sword" /></td>
+<td><code v-pre>dw19</code></td>
+<td>Grimmua Great Sword</td>
+<td>item_skin</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me dw19 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/dw21.png" alt="Grimmua Axe" /></td>
+<td><code v-pre>dw21</code></td>
+<td>Grimmua Axe</td>
+<td>item_skin</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me dw21 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/dw23.png" alt="Grimmua Staff" /></td>
+<td><code v-pre>dw23</code></td>
+<td>Grimmua Staff</td>
+<td>item_skin</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me dw23 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/dw25.png" alt="Grimmua Sword" /></td>
+<td><code v-pre>dw25</code></td>
+<td>Grimmua Sword</td>
+<td>item_skin</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me dw25 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/dw27.png" alt="Grimmua Bow" /></td>
+<td><code v-pre>dw27</code></td>
+<td>Grimmua Bow</td>
+<td>item_skin</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me dw27 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/wbj1.png" alt="light Purple Butterfly" /></td>
+<td><code v-pre>wbj1</code></td>
+<td>light Purple Butterfly</td>
+<td>item_fashion</td>
+<td>epic</td>
+<td><code v-pre>giveitem me wbj1 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/wbj2.png" alt="light Pink Butterfly" /></td>
+<td><code v-pre>wbj2</code></td>
+<td>light Pink Butterfly</td>
+<td>item_fashion</td>
+<td>epic</td>
+<td><code v-pre>giveitem me wbj2 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/wbj3.png" alt="Yellow Butterfly" /></td>
+<td><code v-pre>wbj3</code></td>
+<td>Yellow Butterfly</td>
+<td>item_fashion</td>
+<td>epic</td>
+<td><code v-pre>giveitem me wbj3 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/wbj4.png" alt="Purple Blue Butterfly" /></td>
+<td><code v-pre>wbj4</code></td>
+<td>Purple Blue Butterfly</td>
+<td>item_fashion</td>
+<td>epic</td>
+<td><code v-pre>giveitem me wbj4 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/wbj5.png" alt="Pink Butterfly" /></td>
+<td><code v-pre>wbj5</code></td>
+<td>Pink Butterfly</td>
+<td>item_fashion</td>
+<td>epic</td>
+<td><code v-pre>giveitem me wbj5 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/wbj6.png" alt="Purple Butterfly" /></td>
+<td><code v-pre>wbj6</code></td>
+<td>Purple Butterfly</td>
+<td>item_fashion</td>
+<td>epic</td>
+<td><code v-pre>giveitem me wbj6 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/wbj7.png" alt="Jade Butterfly" /></td>
+<td><code v-pre>wbj7</code></td>
+<td>Jade Butterfly</td>
+<td>item_fashion</td>
+<td>epic</td>
+<td><code v-pre>giveitem me wbj7 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/wbj8.png" alt="Green Butterfly" /></td>
+<td><code v-pre>wbj8</code></td>
+<td>Green Butterfly</td>
+<td>item_fashion</td>
+<td>epic</td>
+<td><code v-pre>giveitem me wbj8 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/wbj9.png" alt="Burned Pink Butterfly" /></td>
+<td><code v-pre>wbj9</code></td>
+<td>Burned Pink Butterfly</td>
+<td>item_fashion</td>
+<td>epic</td>
+<td><code v-pre>giveitem me wbj9 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/mcrby01.png" alt="CryBaby Yellow Hat" /></td>
+<td><code v-pre>mcrby01</code></td>
+<td>CryBaby Yellow Hat</td>
+<td>item_fashion</td>
+<td>epic</td>
+<td><code v-pre>giveitem me mcrby01 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/mcrby02.png" alt="CryBaby Huge hug" /></td>
+<td><code v-pre>mcrby02</code></td>
+<td>CryBaby Huge hug</td>
+<td>item_fashion</td>
+<td>epic</td>
+<td><code v-pre>giveitem me mcrby02 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/mcrby03.png" alt="CryBaby Chikchik" /></td>
+<td><code v-pre>mcrby03</code></td>
+<td>CryBaby Chikchik</td>
+<td>item_fashion</td>
+<td>epic</td>
+<td><code v-pre>giveitem me mcrby03 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/mcrby04.png" alt="CryBaby Donut" /></td>
+<td><code v-pre>mcrby04</code></td>
+<td>CryBaby Donut</td>
+<td>item_fashion</td>
+<td>epic</td>
+<td><code v-pre>giveitem me mcrby04 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/mcrby05.png" alt="Crying CryBaby" /></td>
+<td><code v-pre>mcrby05</code></td>
+<td>Crying CryBaby</td>
+<td>item_fashion</td>
+<td>epic</td>
+<td><code v-pre>giveitem me mcrby05 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/mcrby06.png" alt="CryBaby Chikchuck" /></td>
+<td><code v-pre>mcrby06</code></td>
+<td>CryBaby Chikchuck</td>
+<td>item_fashion</td>
+<td>epic</td>
+<td><code v-pre>giveitem me mcrby06 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/wing_myt.png" alt="Blue Harmony" /></td>
+<td><code v-pre>wing_myt</code></td>
+<td>Blue Harmony</td>
+<td>item_fashion</td>
+<td>epic</td>
+<td><code v-pre>giveitem me wing_myt 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/wing_myt1.png" alt="Green Harmony" /></td>
+<td><code v-pre>wing_myt1</code></td>
+<td>Green Harmony</td>
+<td>item_fashion</td>
+<td>epic</td>
+<td><code v-pre>giveitem me wing_myt1 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/wing_myt2.png" alt="Yellow Harmony" /></td>
+<td><code v-pre>wing_myt2</code></td>
+<td>Yellow Harmony</td>
+<td>item_fashion</td>
+<td>epic</td>
+<td><code v-pre>giveitem me wing_myt2 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/wing_myt3.png" alt="Purple Harmony" /></td>
+<td><code v-pre>wing_myt3</code></td>
+<td>Purple Harmony</td>
+<td>item_fashion</td>
+<td>epic</td>
+<td><code v-pre>giveitem me wing_myt3 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/wing_myt4.png" alt="Sunset Harmony" /></td>
+<td><code v-pre>wing_myt4</code></td>
+<td>Sunset Harmony</td>
+<td>item_fashion</td>
+<td>epic</td>
+<td><code v-pre>giveitem me wing_myt4 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/wing_myt5.png" alt="Pink Harmony" /></td>
+<td><code v-pre>wing_myt5</code></td>
+<td>Pink Harmony</td>
+<td>item_fashion</td>
+<td>epic</td>
+<td><code v-pre>giveitem me wing_myt5 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/wcj.png" alt="Grimmua Sky Wings" /></td>
+<td><code v-pre>wcj</code></td>
+<td>Grimmua Sky Wings</td>
+<td>item_fashion</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me wcj 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/wcj1.png" alt="Grimmua Magic Wings" /></td>
+<td><code v-pre>wcj1</code></td>
+<td>Grimmua Magic Wings</td>
+<td>item_fashion</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me wcj1 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/wcj2.png" alt="Light Holy Wings" /></td>
+<td><code v-pre>wcj2</code></td>
+<td>Light Holy Wings</td>
+<td>item_fashion</td>
+<td>super_legendary</td>
+<td><code v-pre>giveitem me wcj2 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/dw47.png" alt="Light Holy Disk" /></td>
+<td><code v-pre>dw47</code></td>
+<td>Light Holy Disk</td>
+<td>item_fashion</td>
+<td>legendary</td>
+<td><code v-pre>giveitem me dw47 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/dw48.png" alt="Grimmua Disk" /></td>
+<td><code v-pre>dw48</code></td>
+<td>Grimmua Disk</td>
+<td>item_fashion</td>
+<td>legendary</td>
+<td><code v-pre>giveitem me dw48 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/faj1.png" alt="Dunny" /></td>
+<td><code v-pre>faj1</code></td>
+<td>Dunny</td>
+<td>item_fashion</td>
+<td>legendary</td>
+<td><code v-pre>giveitem me faj1 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/faj2.png" alt="Dunna" /></td>
+<td><code v-pre>faj2</code></td>
+<td>Dunna</td>
+<td>item_fashion</td>
+<td>legendary</td>
+<td><code v-pre>giveitem me faj2 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/dw49.png" alt="Devil Lord Horn" /></td>
+<td><code v-pre>dw49</code></td>
+<td>Devil Lord Horn</td>
+<td>item_fashion</td>
+<td>epic</td>
+<td><code v-pre>giveitem me dw49 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/dw50.png" alt="Devil Horn" /></td>
+<td><code v-pre>dw50</code></td>
+<td>Devil Horn</td>
+<td>item_fashion</td>
+<td>epic</td>
+<td><code v-pre>giveitem me dw50 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/dw51.png" alt="Devil mons" /></td>
+<td><code v-pre>dw51</code></td>
+<td>Devil mons</td>
+<td>item_fashion</td>
+<td>epic</td>
+<td><code v-pre>giveitem me dw51 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/dw52.png" alt="Young Devil Horn" /></td>
+<td><code v-pre>dw52</code></td>
+<td>Young Devil Horn</td>
+<td>item_fashion</td>
+<td>epic</td>
+<td><code v-pre>giveitem me dw52 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/dw43.png" alt="Bohoma Lord Horn" /></td>
+<td><code v-pre>dw43</code></td>
+<td>Bohoma Lord Horn</td>
+<td>item_fashion</td>
+<td>epic</td>
+<td><code v-pre>giveitem me dw43 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/dw44.png" alt="Bohoma Horn" /></td>
+<td><code v-pre>dw44</code></td>
+<td>Bohoma Horn</td>
+<td>item_fashion</td>
+<td>epic</td>
+<td><code v-pre>giveitem me dw44 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/dw45.png" alt="White Devil Horn" /></td>
+<td><code v-pre>dw45</code></td>
+<td>White Devil Horn</td>
+<td>item_fashion</td>
+<td>epic</td>
+<td><code v-pre>giveitem me dw45 1</code></td>
+</tr>
+<tr>
+<td><img src="../images/eldoria/dw46.png" alt="Young White devil" /></td>
+<td><code v-pre>dw46</code></td>
+<td>Young White devil</td>
+<td>item_fashion</td>
+<td>epic</td>
+<td><code v-pre>giveitem me dw46 1</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+
+                                
+                                <!-- Required only on API pages -->
+                                <doc-toolbar-member-filter-no-results></doc-toolbar-member-filter-no-results>
+                            </div>
+                            <footer id="retype-content-footer" class="clear-both">
+                            
+                                <nav id="retype-nextprev" class="print:hidden flex mt-14">
+                                    <div class="w-1/2">
+                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-body-link border border-base-border hover:border-base-border-hover rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../weapons/">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
+                                            <span>
+                                                <span class="block text-xs font-normal text-base-text-muted">Previous</span>
+                                                <span class="block mt-1">Liste des armes</span>
+                                            </span>
+                                        </a>
+                                    </div>
+                            
+                                    <div class="w-1/2">
+                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-body-link border border-base-border hover:border-base-border-hover rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../resources/">
+                                            <span>
+                                                <span class="block text-xs font-normal text-right text-base-text-muted">Next</span>
+                                                <span class="block mt-1">Ressources Eldoria — descriptions</span>
+                                            </span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
+                                        </a>
+                                    </div>
+                                </nav>
+                            </footer>
+                        </main>
+                
+                        <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
+                            <footer class="flex flex-wrap items-center justify-between print:justify-center">
+                                <div id="retype-footer-links" class="print:hidden">
+                                    <ul class="flex flex-wrap items-center text-sm">
+                                    </ul>
+                                </div>
+                                <div id="retype-copyright" class="print:justify-center py-2 text-footer-text font-footer-link-weight text-sm leading-relaxed"><p>© Copyright 2026 Eldoria. Tous droits réservés.</p></div>
+                            </footer>
+                        </div>
+                    </div>
+                
+                    <!-- Rendered if sidebar right is enabled -->
+                    <!-- Sidebar right skeleton-->
+                    <div v-cloak class="fixed top-0 bottom-0 right-0 translate-x-full bg-sidebar-right-bg border-sidebar-right-border lg:sticky lg:border-l lg:shrink-0 lg:pt-6 lg:transform-none sm:w-1/2 lg:w-64 lg:z-0 md:w-104 sidebar-right skeleton">
+                        <div class="pl-5">
+                            <div class="w-32 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                            <div class="w-48 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                            <div class="w-40 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                        </div>
+                    </div>
+                
+                    <!-- User should be able to hide sidebar right -->
+                    <doc-sidebar-right v-cloak></doc-sidebar-right>
+                </div>
+
+            </div>
+        </div>
+    
+        <doc-search-mobile></doc-search-mobile>
+        <doc-back-to-top></doc-back-to-top>
+    </div>
+
+
+    <div id="retype-overlay-target"></div>
+
+    <script data-cfasync="false">window.__DOCS__ = { "title": "Liste des items", level: 1, icon: "file", hasPrism: false, hasMermaid: false, hasMath: false, tocDepth: 23 }</script>
+</body>
+</html>
